@@ -10,7 +10,7 @@ const cors = require('cors')
 , passport = require('passport')
 , Auth0Strategy = require('passport-auth0')
 const app = express();
-const port  =  3080;
+const port  =  3300;
 //////////////////////////////////////////////////////////////////////////////////////////
 app.use(bodyParser.json());
 app.use(cors());
