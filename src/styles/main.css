@@ -1,15 +1,39 @@
 body {
   padding: 0px;
   margin: 0px;
-  background-color: black; }
-
-h1 {
-  padding-top: 200px;
-  font-size: 100px;
-  margin: 0px; }
+  background-color: #585858; }
 
 .landing-title {
-  position: absolute;
-  margin: 0px;
   text-align: center;
-  color: white; }
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 160px; }
+  .landing-title h1 {
+    font-size: 100px;
+    color: #14e4d2;
+    font-family: 'Pavanam', sans-serif;
+    letter-spacing: 8px;
+    font-weight: 600;
+    text-shadow: 2px 8px #313131; }
+  .landing-title .subtitle {
+    margin-top: -90px;
+    color: rgba(248, 171, 103, 0.979);
+    font-family: 'Pavanam', sans-serif;
+    text-shadow: 2px 2px #141414; }
+  .landing-title .login {
+    margin-top: 40px;
+    height: 50px;
+    width: 180px;
+    background-color: #216483;
+    box-shadow: 2px 2px 2px #242424;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 20px;
+    color: #ebebeb;
+    text-shadow: 2px 2px #141414; }
