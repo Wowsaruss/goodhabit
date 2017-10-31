@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Particles from 'react-particles-js';
-import axios from 'axios'
+import {Link} from 'react-router-dom';
+import axios from 'axios';
 
 
 class Landing extends Component {
@@ -42,6 +43,12 @@ class Landing extends Component {
                     <div className="loginBtn"><a className="auth1" href={process.env.REACT_APP_HOST}><div>Start Now</div></a></div></div>
                 </div>
                 <Particles params={{particles: {line_linked: { shadow: { enable: true, color: "#3CA9D1", blur: 5}}}}} style={{width: '100%'}} />
+
+                <div className="landingFParent">
+                    <div className="landingFoot">
+                        <div className="AU"><Link className="Link" to="aboutus"><div>About Us</div></Link></div>
+                    </div>
+                </div>
             </div>
         );
     };
