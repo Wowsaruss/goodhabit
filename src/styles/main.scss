@@ -2,3 +2,10 @@
 @import 'mixins';
 @import 'variables';
 @import 'global';
+
+@import './components/_landing.scss';
+@import './components/_aboutUs.scss';
+@import './components/_dashboard.scss';
+@import './components/_goals.scss';
+@import './components/_journal.scss';
+@import './components/_profile.scss';

@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import {Switch, Route} from 'react-router-dom';
-import './App.css';
 import Landing from './components/Landing/Landing.js';
 import AboutUs from './components/AboutUs/AboutUs.js';
 import Profile from './components/Profile/Profile.js';
 import Dashboard from './components/Dashboard/Dashboard.js';
 import Journal from './components/Journal/Journal.js';
 import Goals from './components/Goals/Goals.js';
-
 
 
 class App extends Component {
