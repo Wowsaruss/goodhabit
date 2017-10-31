@@ -35,7 +35,22 @@ massive(process.env.CONNECTION_STRING)
 // REST ENDPOINTS
 //////////////////////////////////////////////////////////////////////////////////////////
 // GET
+    app.get('/api/profiles', (req, res) => {
+    req.app.get('db').get_profile(5, req.body.username, req.body.addiction_type, req.body.addiction_time).then(profile =>{
+        res.status(200).send(profile);
+    }).catch((err) => {console.log(err)})
+})
+
 // POST
+    app.post('/api/profiles', (req, res) => {
+    const profileData = app.get('db')
+    req.app.get('db').create_profile([5, req.body.username, req.body.addiction_type, req.body.addiction_time]).then(profile =>{
+        res.send()
+    })
+    .catch( function(err){
+        console.log(err)
+    })
+})
 // PUT
 // DELETE
 //////////////////////////////////////////////////////////////////////////////////////////
