@@ -3,12 +3,19 @@ body {
   margin: 0px;
   background-color: #585858; }
 
+h1 {
+  padding-top: 200px;
+  font-size: 100px;
+  margin: 0px; }
+
 .landing-title {
+  position: absolute;
+  margin: 0px;
   text-align: center;
   color: white;
   position: absolute;
   width: 100%;
-  margin-top: 160px; }
+  margin-top: 20px; }
   .landing-title h1 {
     font-size: 100px;
     color: #14e4d2;
@@ -17,7 +24,7 @@ body {
     font-weight: 600;
     text-shadow: 2px 8px #313131; }
   .landing-title .subtitle {
-    margin-top: -70px;
+    margin-top: -10px;
     color: rgba(248, 171, 103, 0.979);
     font-family: 'Pavanam', sans-serif;
     text-shadow: 2px 2px #141414;
