@@ -6,11 +6,9 @@ body {
 .landing-title {
   text-align: center;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 160px; }
+  position: absolute;
+  width: 100%;
+  margin-top: 20px; }
   .landing-title h1 {
     font-size: 100px;
     color: #14e4d2;
@@ -19,12 +17,16 @@ body {
     font-weight: 600;
     text-shadow: 2px 8px #313131; }
   .landing-title .subtitle {
-    margin-top: -90px;
+    margin-top: -10px;
     color: rgba(248, 171, 103, 0.979);
     font-family: 'Pavanam', sans-serif;
-    text-shadow: 2px 2px #141414; }
-  .landing-title .login {
-    margin-top: 40px;
+    text-shadow: 2px 2px #141414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .landing-title .loginBtn {
+    margin-top: 25px;
     height: 50px;
     width: 180px;
     background-color: #216483;
@@ -36,4 +38,5 @@ body {
     flex-direction: row;
     font-size: 20px;
     color: #ebebeb;
-    text-shadow: 2px 2px #141414; }
+    text-shadow: 2px 2px #141414;
+    cursor: pointer; }
