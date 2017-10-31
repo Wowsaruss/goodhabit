@@ -3,14 +3,7 @@ body {
   margin: 0px;
   background-color: #585858; }
 
-h1 {
-  padding-top: 200px;
-  font-size: 100px;
-  margin: 0px; }
-
 .landing-title {
-  position: absolute;
-  margin: 0px;
   text-align: center;
   color: white;
   position: absolute;
