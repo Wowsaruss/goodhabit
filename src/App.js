@@ -6,7 +6,7 @@ import Profile from './components/Profile/Profile.js';
 import Dashboard from './components/Dashboard/Dashboard.js';
 import Journal from './components/Journal/Journal.js';
 import Goals from './components/Goals/Goals.js';
-
+import Editprofile from './components/EditProfile/editprofile.js'
 
 class App extends Component {
   render() {
@@ -19,6 +19,7 @@ class App extends Component {
           <Route path='/dashboard' component={Dashboard}/>
           <Route path='/journal' component={Journal}/>
           <Route path='/goals' component={Goals}/>
+          <Route path='editprofile' component={Editprofile}/>
         </Switch>
       </div>
     );
