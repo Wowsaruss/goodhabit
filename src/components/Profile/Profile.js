@@ -8,16 +8,29 @@ class Profile extends Component {
           this.state = {
             username: '',
             time_input: '',
-            type_input: ''
+            type_input: '',
+            sex: '',
+            birthday: '',
+            phone: '',
+            first_name: '',
+            last_name: '',
+            profile_picture: '',
+            about_me: ''
           }
         }
 
         postProfile(profile){
-          axios.post('http://localhost:3080/api/profiles', {
+          axios.post('http://localhost:3300/api/profiles', {
             username: this.state.username,
             addiction_type: this.state.type_input,
-            addiction_time: this.state.time_input
-            
+            addiction_date: this.state.time_input,
+            sex: this.state.sex,
+            birthday: this.state.birthday,
+            phone_number: this.state.phone,
+            first_name: this.state.first_name,
+            last_name: this.state.last_name,
+            profile_pic: this.state.profile_picture,
+            about_me: this.state.about_me
           })
         }
         updateUsername(input){
@@ -35,6 +48,43 @@ class Profile extends Component {
                 type_input: input
             })      
 }
+
+        updateSex(input){
+            this.setState({
+                sex: input
+            })
+        }
+
+        updateBirthday(input){
+            this.setState({
+                birthday: input
+            })
+        }
+        updatePhone(input){
+            this.setState({
+                phone: input
+            })
+        }
+        updateFirstName(input){
+            this.setState({
+                first_name: input
+            })
+        }
+        updateLastName(input){
+            this.setState({
+                last_name: input
+            })
+        }
+        updatePicture(input){
+            this.setState({
+                profile_picture: input
+            })
+        }
+        updateAbout(input){
+            this.setState({
+                about_me: input
+            })
+        }
 
 
     render() {
@@ -54,22 +104,41 @@ class Profile extends Component {
                 <div className="selectionBG">
                     <div className='profile-box'>
                         <div className="Row"> 
-                            <div className="FRclass">First Name <br/><br/><input  type="text" placeholder="First Name"/></div>
-                            <div className="FRclass">Last Name <br/><br/><input type="text" placeholder="Last Name"/></div>
+                            <div className="FRclass">First Name <br/><br/><input onChange={(e) => this.updateFirstName(e.target.value)}   type="text" placeholder="First Name"/></div>
+                            <div className="FRclass">Last Name <br/><br/><input onChange={(e) => this.updateLastName(e.target.value)}  type="text" placeholder="Last Name"/></div>
                             <div className="FRclass">Sex<br/><br/>
-                                <select>
+                                <select  onChange={(e) => this.updateSex(e.target.value)} >
                                     <option value="">Select</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                 </select>
                             </div> 
-                            <div className="FRclass">Birthday <br/><br/><input  type="date" /></div>  
+                            <div className="FRclass">Birthday <br/><br/><input onChange={(e) => this.updateBirthday(e.target.value)}  type="date" /></div>  
                         </div>
                        
+<<<<<<< HEAD
                         <div className="Row">
                         <div className="FRclass">Username <br/><br/><input onChange={(e) => this.updateUsername(e.target.value)}type='text' placeholder='enter a username...' /></div>
                         <div className="FRclass">Current Duration of Addiction?<br/><br/><input onChange={(e) => this.updateTime(e.target.value)} type='text' placeholder='Enter a time' /></div>
                             <div className="FRclass">Addiction type <br/><br/>
+=======
+                        <div className="Row"> 
+                            <div className="FRclass">Username <br/><br/><input onChange={(e) => this.updateUsername(e.target.value)}type='text' placeholder='enter a username...' /></div>
+                            <div className="FRclass">Email<br/><br/><input type="text" placeholder="Email"/></div>
+                            <div className="FRclass">Phone Type<br/><br/>
+                                <select>
+                                    <option value="">Select</option>
+                                    <option value="Cell">Cell</option>
+                                    <option value="Home">Home</option>
+                                </select>
+                            </div>
+                            <div className="FRclass">Phone Number<br/><br/><input  onChange={(e) => this.updatePhone(e.target.value)}  type="text" placeholder="Phone Number"/></div> 
+                        </div>
+                            
+                        <div className="Row2">
+                            <div className="FRclass">Current Duration of Addiction?<br/><br/><input onChange={(e) => this.updateTime(e.target.value)} type='text' placeholder='Enter a time' /></div>
+                            <div className="FR1class">Addiction type <br/><br/>
+>>>>>>> master
                                 <select onChange={(e) => this.updateType(e.target.value)}>
                                     <option value=''>Select</option>
                                     <option value='Alcohol'>Alcohol</option>
@@ -80,6 +149,7 @@ class Profile extends Component {
                                     <option value='Other'>Other</option>
                                 </select> 
                             </div>
+<<<<<<< HEAD
                             <div className="FRclass">Phone Number<br/><br/><input type="text" placeholder="Phone Number"/></div> 
                         </div>
                             
@@ -89,6 +159,12 @@ class Profile extends Component {
                             <div className="PicBox"></div>
                         </div>
                            
+=======
+                            <div className="FR2class">Profile Picture <br/><br/><input onChange={(e) => this.updatePicture(e.target.value)}  type="file"/></div>
+                            <div className="PicBox"></div>
+                            <input onChange={(e)=>this.updateAbout(e.target.value)}/>
+                        </div>   
+>>>>>>> master
 
                         <div className="savePParent">
                                     <div><Link to='/dashboard' className="saveP"><div onClick={() => this.postProfile()}>Save Profile</div></Link></div>
