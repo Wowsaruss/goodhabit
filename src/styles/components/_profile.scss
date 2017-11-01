@@ -35,6 +35,7 @@
     border-radius: 10px;
     width: 80%;
     height: 100vh;
+    overflow: auto;
 }
 
 .Row {
@@ -54,6 +55,7 @@
             border: 1px solid rgb(13, 172, 235);
             border-radius: 3px;
             box-shadow: 1px 1px 1px rgb(44, 44, 44);
+            font-size: 14px;
         }
         select {
             width: 108px;
@@ -62,6 +64,7 @@
             border: 1px solid rgb(13, 172, 235);
             border-radius: 3px;
             box-shadow: 1px 1px 1px rgb(44, 44, 44);
+            font-size: 14px;
         }
 }
 
@@ -69,29 +72,6 @@
     margin-top: 60px;
     margin-left: 75px;
     @include flexSetUp (flex-start, center, row);
-}
-
-.FR1class {
-    font-size: 16px;
-    margin-left: 40px;
-    margin-right: 55px;
-    font-weight: 600;
-    input {
-        padding-left: 10px;
-        width: 200px;
-        height: 25px;
-        border: 1px solid rgb(13, 172, 235);
-        border-radius: 3px;
-        box-shadow: 1px 1px 1px rgb(44, 44, 44);
-    }
-    select {
-        width: 200px;
-        height: 30px;
-        padding-left: 10px;
-        border: 1px solid rgb(13, 172, 235);
-        border-radius: 3px;
-        box-shadow: 1px 1px 1px rgb(44, 44, 44);
-    }
 }
 
 .FR2class {
@@ -104,8 +84,19 @@
         width: 200px;
         height: 30px;
         color: rgb(13, 172, 235);
+        font-size: 14px;
+    }
+    textarea {
+        width: 500px;
+        height: 110px;
+        border: 1px solid rgb(13, 172, 235);
+        border-radius: 3px;
+        box-shadow: 1px 1px 1px rgb(44, 44, 44);
+        font-size: 14px;
     }
 }
+
+
 
 .PicBox {
     margin-left: -15px;

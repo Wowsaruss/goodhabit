@@ -86,6 +86,81 @@ body {
   .auth1:hover {
     color: #17e4e4; }
 
+.aboutParent {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  margin-top: 40px;
+  font-size: 25px;
+  height: 100vh; }
+
+.aboutBG {
+  background-color: white;
+  height: 80vh;
+  width: 80%; }
+
+.bg0Dash {
+  height: 150px;
+  width: 100%;
+  background-color: lightgray;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row; }
+
+.Welcome {
+  margin-left: 50px;
+  padding-left: 20px;
+  height: 120px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.349);
+  border-radius: 8px; }
+  .Welcome span {
+    color: red;
+    font-size: 20px; }
+  .Welcome .profileLink {
+    text-decoration: none;
+    color: red; }
+
+.bg1Dash {
+  height: 350px;
+  width: 100%;
+  background-color: white; }
+
+.badgeParent1 {
+  padding-top: 30px;
+  padding-right: 150px;
+  padding-left: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row; }
+
+.badgeParent2 {
+  margin-top: 40px;
+  margin-left: 70px;
+  margin-right: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row; }
+
+.badge {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  border-radius: 50px;
+  margin-bottom: 8px; }
+
+.badgeName {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
 .profileBG {
   background-color: gray;
   height: 150vh; }
@@ -123,7 +198,8 @@ body {
   box-shadow: 5px 5px 5px #2c2c2c;
   border-radius: 10px;
   width: 80%;
-  height: 100vh; }
+  height: 100vh;
+  overflow: auto; }
 
 .Row {
   margin-top: 90px;
@@ -143,14 +219,16 @@ body {
     height: 25px;
     border: 1px solid #0daceb;
     border-radius: 3px;
-    box-shadow: 1px 1px 1px #2c2c2c; }
+    box-shadow: 1px 1px 1px #2c2c2c;
+    font-size: 14px; }
   .FRclass select {
     width: 108px;
     height: 30px;
     padding-left: 10px;
     border: 1px solid #0daceb;
     border-radius: 3px;
-    box-shadow: 1px 1px 1px #2c2c2c; }
+    box-shadow: 1px 1px 1px #2c2c2c;
+    font-size: 14px; }
 
 .Row2 {
   margin-top: 60px;
@@ -159,26 +237,6 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row; }
-
-.FR1class {
-  font-size: 16px;
-  margin-left: 40px;
-  margin-right: 55px;
-  font-weight: 600; }
-  .FR1class input {
-    padding-left: 10px;
-    width: 200px;
-    height: 25px;
-    border: 1px solid #0daceb;
-    border-radius: 3px;
-    box-shadow: 1px 1px 1px #2c2c2c; }
-  .FR1class select {
-    width: 200px;
-    height: 30px;
-    padding-left: 10px;
-    border: 1px solid #0daceb;
-    border-radius: 3px;
-    box-shadow: 1px 1px 1px #2c2c2c; }
 
 .FR2class {
   font-size: 16px;
@@ -189,7 +247,15 @@ body {
     padding-left: 0px;
     width: 200px;
     height: 30px;
-    color: #0daceb; }
+    color: #0daceb;
+    font-size: 14px; }
+  .FR2class textarea {
+    width: 500px;
+    height: 110px;
+    border: 1px solid #0daceb;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #2c2c2c;
+    font-size: 14px; }
 
 .PicBox {
   margin-left: -15px;

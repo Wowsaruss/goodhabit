@@ -1,0 +1,13 @@
+.aboutParent {
+    @include flexSetUp (baseline, center, column);
+    color: white;
+    margin-top: 40px;
+    font-size: 25px;
+    height: 100vh;
+}
+
+.aboutBG {
+    background-color: white;
+    height: 80vh;
+    width: 80%;
+}
