@@ -85,14 +85,14 @@ passport.deserializeUser( function( userId, done) {
 })
 app.get('/auth', passport.authenticate('auth0'));
 app.get('/auth/callback', passport.authenticate('auth0',{
-    successRedirect: `${process.env.REACT_APP_HOST}/#/profile`,
+    successRedirect: `${process.env.FRONT_END_HOST}/#/dashboard`,
     failureRedirect: '/auth'
 }))
 app.get('/auth/logout', (req,res) => {
     req.logOut();
     res.redirect(302, process.env.AUTH_LOGOUT)
 })
-app.get('/api/user',  passport.authenticate('auth0'), (req, res) => {
+app.get('/auth/user',  passport.authenticate('auth0'), (req, res) => {
     req.app.get('db').current_user().then(user =>{
         res.status(200).send(user)
     }).catch((err) => {console.log(err)})
