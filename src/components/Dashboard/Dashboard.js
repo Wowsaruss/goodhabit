@@ -33,11 +33,15 @@ class Dashboard extends Component {
 
         return(
             <div>
-                <div className="bg0Dash"><div className="Welcome"> <h3>Welcome {profile},</h3> Don't have a profile yet?<br/>
-                                                                                               Click the link to get started.
-                                                                                               &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-                                                                                                <span><Link className="profileLink" to="/profile">Create Profile</Link></span>
-                                                                                               </div></div>
+                <div className="bg0Dash">
+                    <div className="Welcome"> <h3>Welcome {profile},</h3>
+                        Don't have a profile yet?<br/>Click the link to get started.&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                        <span><Link className="profileLink" to="/profile">Create Profile</Link></span>
+                    </div>
+                    <div className='logoutButton' >
+                        <a href={`${process.env.REACT_APP_HOST}/auth/logout`} >Logout</a>
+                    </div>
+                 </div>
                 <div className="bg1Dash">
                     <div className="badgeParent1">
                         <div className="badgeName"><div className="badge"></div>1 Day Finished</div>

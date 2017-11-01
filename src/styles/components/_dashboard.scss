@@ -23,6 +23,13 @@
         }
 }
 
+.logoutButton {
+    padding: 30px;
+    background-color: $buttonColor;
+    color: white;
+    cursor: pointer;
+}
+
 .bg1Dash {
     height: 350px;
     width: 100%;
