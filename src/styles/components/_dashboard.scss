@@ -1,0 +1,57 @@
+.bg0Dash {
+    height: 150px;
+    width: 100%;
+    background-color: lightgray;
+    @include flexSetUp (flex-start, center, row);
+}
+
+.Welcome {
+    margin-left: 50px;
+    padding-left: 20px;
+    height: 120px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.349);
+    border-radius: 8px;
+        span {
+            color: red;
+            font-size: 20px;
+        }
+
+        .profileLink {
+            text-decoration: none;
+            color: red;
+        }
+}
+
+.bg1Dash {
+    height: 350px;
+    width: 100%;
+    background-color: white;
+}
+
+.badgeParent1 {
+    padding-top: 30px;
+    padding-right: 150px;
+    padding-left: 150px;
+    @include flexSetUp (space-between, center, row);
+}
+
+.badgeParent2 {
+    margin-top: 40px;
+    margin-left: 70px;
+    margin-right: 70px;
+    @include flexSetUp (space-between, center, row);
+}
+
+.badge {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    border-radius: 50px;
+    margin-bottom: 8px;
+}
+
+.badgeName {
+    text-align: center;
+    @include flexSetUp (center, center, column);
+}
