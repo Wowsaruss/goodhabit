@@ -228,7 +228,7 @@ body {
     box-shadow: 1px 1px 1px #2c2c2c;
     font-size: 14px; }
   .FRclass select {
-    width: 108px;
+    width: 170px;
     height: 30px;
     padding-left: 10px;
     border: 1px solid #0daceb;
@@ -247,7 +247,7 @@ body {
 .FR2class {
   font-size: 16px;
   font-weight: 600;
-  margin-left: 40px;
+  margin-left: 10px;
   margin-right: 55px; }
   .FR2class input {
     padding-left: 0px;
@@ -256,7 +256,7 @@ body {
     color: #0daceb;
     font-size: 14px; }
   .FR2class textarea {
-    width: 500px;
+    width: 580px;
     height: 110px;
     border: 1px solid #0daceb;
     border-radius: 3px;
@@ -280,7 +280,7 @@ body {
   margin-left: 50px; }
 
 .saveP {
-  margin-top: 50px;
+  margin-top: 70px;
   margin-left: 60px;
   margin-bottom: 20px;
   height: 50px;
