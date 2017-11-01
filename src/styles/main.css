@@ -8,7 +8,7 @@ body {
   color: white;
   position: absolute;
   width: 100%;
-  margin-top: 20px; }
+  margin-top: 120px; }
   .landing-title h1 {
     font-size: 100px;
     color: #17e4e4;
@@ -17,7 +17,7 @@ body {
     font-weight: 600;
     text-shadow: 2px 8px #313131; }
   .landing-title .subtitle {
-    margin-top: -10px;
+    margin-top: -80px;
     color: rgba(248, 171, 103, 0.979);
     font-family: 'Pavanam', sans-serif;
     text-shadow: 2px 2px #141414;
@@ -39,7 +39,8 @@ body {
     font-size: 20px;
     color: #d4d4d4;
     text-shadow: 2px 2px #141414;
-    cursor: pointer; }
+    cursor: pointer;
+    font-weight: bold; }
 
 .landingFParent {
   display: flex;
@@ -78,3 +79,150 @@ body {
   color: #0daceb; }
   .Link:hover {
     color: rgba(248, 171, 103, 0.979); }
+
+.auth1 {
+  text-decoration: none;
+  color: #d4d4d4; }
+  .auth1:hover {
+    color: #17e4e4; }
+
+.profileBG {
+  background-color: gray;
+  height: 150vh; }
+
+.profileParent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column; }
+
+.CreateProfile {
+  margin-top: 60px;
+  margin-left: 160px;
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px #141414; }
+
+.profileDes {
+  margin-top: 30px;
+  margin-left: 160px;
+  color: white;
+  font-size: 16px;
+  line-height: 30px;
+  text-shadow: 1.5px 1.5px #141414; }
+
+.selectionParent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.selectionBG {
+  margin-top: 30px;
+  background-color: white;
+  box-shadow: 5px 5px 5px #2c2c2c;
+  border-radius: 10px;
+  width: 80%;
+  height: 100vh; }
+
+.Row {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; }
+
+.FRclass {
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: 16px;
+  font-weight: 600; }
+  .FRclass input {
+    padding-left: 10px;
+    width: 200px;
+    height: 25px;
+    border: 1px solid #0daceb;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #2c2c2c; }
+  .FRclass select {
+    width: 108px;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid #0daceb;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #2c2c2c; }
+
+.Row2 {
+  margin-top: 60px;
+  margin-left: 75px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row; }
+
+.FR1class {
+  font-size: 16px;
+  margin-left: 40px;
+  margin-right: 55px;
+  font-weight: 600; }
+  .FR1class input {
+    padding-left: 10px;
+    width: 200px;
+    height: 25px;
+    border: 1px solid #0daceb;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #2c2c2c; }
+  .FR1class select {
+    width: 200px;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid #0daceb;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #2c2c2c; }
+
+.FR2class {
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 40px;
+  margin-right: 55px; }
+  .FR2class input {
+    padding-left: 0px;
+    width: 200px;
+    height: 30px;
+    color: #0daceb; }
+
+.PicBox {
+  margin-left: -15px;
+  margin-right: 85px;
+  height: 150px;
+  width: 150px;
+  border: 1px solid #0daceb;
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px #2c2c2c; }
+
+.savePParent {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 50px; }
+
+.saveP {
+  margin-top: 50px;
+  margin-left: 60px;
+  margin-bottom: 20px;
+  height: 50px;
+  width: 180px;
+  background-color: #2280a8;
+  box-shadow: 2px 2px 2px #242424;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 25px;
+  color: #eeeeee;
+  text-shadow: 1.5px 1.5px #141414;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none; }
