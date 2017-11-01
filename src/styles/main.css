@@ -124,6 +124,12 @@ body {
     text-decoration: none;
     color: red; }
 
+.logoutButton {
+  padding: 30px;
+  background-color: #216483;
+  color: white;
+  cursor: pointer; }
+
 .bg1Dash {
   height: 350px;
   width: 100%;

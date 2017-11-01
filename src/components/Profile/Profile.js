@@ -116,12 +116,6 @@ class Profile extends Component {
                             <div className="FRclass">Birthday <br/><br/><input onChange={(e) => this.updateBirthday(e.target.value)}  type="date" /></div>  
                         </div>
                        
-<<<<<<< HEAD
-                        <div className="Row">
-                        <div className="FRclass">Username <br/><br/><input onChange={(e) => this.updateUsername(e.target.value)}type='text' placeholder='enter a username...' /></div>
-                        <div className="FRclass">Current Duration of Addiction?<br/><br/><input onChange={(e) => this.updateTime(e.target.value)} type='text' placeholder='Enter a time' /></div>
-                            <div className="FRclass">Addiction type <br/><br/>
-=======
                         <div className="Row"> 
                             <div className="FRclass">Username <br/><br/><input onChange={(e) => this.updateUsername(e.target.value)}type='text' placeholder='enter a username...' /></div>
                             <div className="FRclass">Email<br/><br/><input type="text" placeholder="Email"/></div>
@@ -138,7 +132,6 @@ class Profile extends Component {
                         <div className="Row2">
                             <div className="FRclass">Current Duration of Addiction?<br/><br/><input onChange={(e) => this.updateTime(e.target.value)} type='text' placeholder='Enter a time' /></div>
                             <div className="FR1class">Addiction type <br/><br/>
->>>>>>> master
                                 <select onChange={(e) => this.updateType(e.target.value)}>
                                     <option value=''>Select</option>
                                     <option value='Alcohol'>Alcohol</option>
@@ -149,22 +142,10 @@ class Profile extends Component {
                                     <option value='Other'>Other</option>
                                 </select> 
                             </div>
-<<<<<<< HEAD
-                            <div className="FRclass">Phone Number<br/><br/><input type="text" placeholder="Phone Number"/></div> 
-                        </div>
-                            
-                        <div className="Row2">
-                            <div className="FR2class">About Me<br/><br/><textarea type="text"/></div>
-                            <div className="FR2class">Profile Picture <br/><br/><input type="file"/></div>
-                            <div className="PicBox"></div>
-                        </div>
-                           
-=======
                             <div className="FR2class">Profile Picture <br/><br/><input onChange={(e) => this.updatePicture(e.target.value)}  type="file"/></div>
                             <div className="PicBox"></div>
                             <input onChange={(e)=>this.updateAbout(e.target.value)}/>
                         </div>   
->>>>>>> master
 
                         <div className="savePParent">
                                     <div><Link to='/dashboard' className="saveP"><div onClick={() => this.postProfile()}>Save Profile</div></Link></div>
