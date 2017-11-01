@@ -8,7 +8,7 @@ class Dashboard extends Component {
           }
         }
     componentDidMount(){
-        axios.get('http://localhost:3080/api/profiles').then(response => {
+        axios.get('http://localhost:3300/api/profiles').then(response => {
             this.setState({
                 profile: response.data
             })
