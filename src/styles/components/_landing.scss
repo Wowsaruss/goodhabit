@@ -3,7 +3,7 @@
     color: white;
     position: absolute;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 120px;
     
 
         h1 {
@@ -16,7 +16,7 @@
         }
 
         .subtitle {
-            margin-top: -10px;
+            margin-top: -80px;
             color: rgba(248, 171, 103, 0.979);
             font-family: 'Pavanam', sans-serif;
             text-shadow: 2px 2px rgb(20, 20, 20);
@@ -36,6 +36,7 @@
             color: rgb(212, 212, 212);
             text-shadow: 2px 2px rgb(20, 20, 20);
             cursor: pointer;
+            font-weight: bold;
         }
 }
 
@@ -74,4 +75,12 @@
         &:hover {
             color: rgba(248, 171, 103, 0.979);
         }
+}
+
+.auth1 {
+    text-decoration: none;  
+    color: rgb(212, 212, 212);
+         &:hover {
+            color: rgb(23, 228, 228);
+         }
 }

@@ -1,0 +1,142 @@
+.profileBG {
+    background-color: gray;
+    height: 150vh;
+}
+
+.profileParent {
+    @include flexSetUp (center, flex-start, column);
+}
+
+.CreateProfile {
+    margin-top: 60px;
+    margin-left: 160px;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px rgb(20, 20, 20);
+}
+
+.profileDes {
+    margin-top: 30px;
+    margin-left: 160px;
+    color: white;
+    font-size: 16px;
+    line-height: 30px;
+    text-shadow: 1.5px 1.5px rgb(20, 20, 20);
+}
+
+.selectionParent {
+    @include flexSetUp (center, center, column);
+}
+
+.selectionBG {
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgb(44, 44, 44);
+    border-radius: 10px;
+    width: 80%;
+    height: 100vh;
+}
+
+.Row {
+    margin-top: 90px;
+    @include flexSetUp (center, center, row);
+}
+
+.FRclass {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 16px;
+    font-weight: 600;
+        input {
+            padding-left: 10px;
+            width: 200px;
+            height: 25px;
+            border: 1px solid rgb(13, 172, 235);
+            border-radius: 3px;
+            box-shadow: 1px 1px 1px rgb(44, 44, 44);
+        }
+        select {
+            width: 108px;
+            height: 30px;
+            padding-left: 10px;
+            border: 1px solid rgb(13, 172, 235);
+            border-radius: 3px;
+            box-shadow: 1px 1px 1px rgb(44, 44, 44);
+        }
+}
+
+.Row2 {
+    margin-top: 60px;
+    margin-left: 75px;
+    @include flexSetUp (flex-start, center, row);
+}
+
+.FR1class {
+    font-size: 16px;
+    margin-left: 40px;
+    margin-right: 55px;
+    font-weight: 600;
+    input {
+        padding-left: 10px;
+        width: 200px;
+        height: 25px;
+        border: 1px solid rgb(13, 172, 235);
+        border-radius: 3px;
+        box-shadow: 1px 1px 1px rgb(44, 44, 44);
+    }
+    select {
+        width: 200px;
+        height: 30px;
+        padding-left: 10px;
+        border: 1px solid rgb(13, 172, 235);
+        border-radius: 3px;
+        box-shadow: 1px 1px 1px rgb(44, 44, 44);
+    }
+}
+
+.FR2class {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 40px;
+    margin-right: 55px;
+    input {
+        padding-left: 0px;
+        width: 200px;
+        height: 30px;
+        color: rgb(13, 172, 235);
+    }
+}
+
+.PicBox {
+    margin-left: -15px;
+    margin-right: 85px;
+    height: 150px;
+    width: 150px;
+    border: 1px solid rgb(13, 172, 235);
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px rgb(44, 44, 44);
+}
+
+.savePParent {
+    @include flexSetUp (flex-start, center, row);
+    margin-left: 50px;
+}
+
+.saveP {
+    margin-top: 50px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 180px;
+    background-color: rgb(34, 128, 168);
+    box-shadow: 2px 2px 2px rgb(36, 36, 36);
+    border-radius: 5px;
+    @include flexSetUp (center, center, row);
+    font-size: 25px;
+    color: rgb(238, 238, 238);
+    text-shadow: 1.5px 1.5px rgb(20, 20, 20);
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
