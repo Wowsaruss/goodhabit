@@ -1,5 +1,16 @@
+.quotes {
+    height: 50px;
+    width: 100%;
+    background-color: lightgray;
+    @include flexSetUp (center, center, row);
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(33, 100, 131);
+    padding-top: 30px;
+}
+
 .bg0Dash {
-    height: 250px;
+    height: 180px;
     width: 100%;
     background-color: lightgray;
     @include flexSetUp (center, center, row);
