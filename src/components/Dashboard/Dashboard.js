@@ -87,6 +87,7 @@ class Dashboard extends Component {
 
                     <div className="graphParent">
                         <hr />
+                        <Chart/>
                     </div>
 
                     <div className="bodyParent">
