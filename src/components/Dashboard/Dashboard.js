@@ -1,27 +1,35 @@
 import React, {Component} from 'react';
 import axios from 'axios'
 import {Link} from 'react-router-dom';
-
+import Chart from '../Chart/Chart';
 
 
 class Dashboard extends Component {
     constructor() {
         super()
           this.state = {
-            profile: []
+            profile: [],
+            quote: ''
           }
         }
+
     componentDidMount(){
         axios.get('http://localhost:3300/api/profiles').then(response => {
             this.setState({
                 profile: response.data
             })
         })
+
+        axios.get(`http://quotes.rest/qod.json`).then(res => {
+            this.setState({
+                quote: res.data.contents.quotes[0].quote
+            })
+        })
     }
 
 
+
     render() {
-        console.log(this.state.profile)
         var profile = this.state.profile.map((profile) => {
             return (
                 <div className='user-box/'>
@@ -30,9 +38,10 @@ class Dashboard extends Component {
             )
         })
 
-
         return(
             <div>
+                <div className="quotes"><div>{this.state.quote}</div></div>
+
                 <div className="bg0Dash">
                     <div className="Welcome"> <h3>Welcome {profile},</h3>
                         Don't have a profile yet?<br/>Click the link to get started.&ensp;&ensp;&ensp;&ensp;
@@ -78,6 +87,7 @@ class Dashboard extends Component {
 
                     <div className="graphParent">
                         <hr />
+                        <Chart/>
                     </div>
 
                     <div className="bodyParent">
