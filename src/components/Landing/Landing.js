@@ -1,40 +1,19 @@
 import React, {Component} from 'react';
 import Particles from 'react-particles-js';
 import {Link} from 'react-router-dom';
-import axios from 'axios';
 
 
 class Landing extends Component {
     constructor() {
         super()
           this.state = {
-            quote: [],
+            
           }
         }
 
-        componentDidMount(){
-            axios.get('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1%27', {
-                headers: {
-                    withCredentials: false,
-                 'Access-Control-Allow-Origin': '*'
-                    }
-              }).then( (response) => {
-                    this.setState({
-                    quote: response.data
-          
-        })
-    })
-    }
     render() {
 
-        // var quote = this.state.quote.map((quote) => {
-        //     return (
-        //         <div>
-        //             {quote.content}
-        //         </div>
-        //     )
-        // })
-        // console.log(this.state.quote)
+    
         return(
             <div>
                 <div className='landing-title' >
