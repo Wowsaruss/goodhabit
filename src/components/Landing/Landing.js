@@ -27,14 +27,14 @@ class Landing extends Component {
     }
     render() {
 
-        var quote = this.state.quote.map((quote) => {
-            return (
-                <div>
-                    {quote.content}
-                    </div>
-            )
-        })
-        console.log(this.state.quote)
+        // var quote = this.state.quote.map((quote) => {
+        //     return (
+        //         <div>
+        //             {quote.content}
+        //         </div>
+        //     )
+        // })
+        // console.log(this.state.quote)
         return(
             <div>
                 <div className='landing-title' >

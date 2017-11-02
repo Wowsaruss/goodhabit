@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios'
 import {Link} from 'react-router-dom';
-
+import Chart from '../Chart/Chart';
 
 
 class Dashboard extends Component {
@@ -11,6 +11,7 @@ class Dashboard extends Component {
             profile: []
           }
         }
+
     componentDidMount(){
         axios.get('http://localhost:3300/api/profiles').then(response => {
             this.setState({
@@ -18,7 +19,6 @@ class Dashboard extends Component {
             })
         })
     }
-
 
     render() {
         console.log(this.state.profile)
@@ -30,7 +30,6 @@ class Dashboard extends Component {
             )
         })
 
-
         return(
             <div>
                 <div className="bg0Dash">
@@ -38,7 +37,7 @@ class Dashboard extends Component {
                         Don't have a profile yet?<br/>Click the link to get started.&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                         <span><Link className="profileLink" to="/profile">Create Profile</Link></span>
                     </div>
-                    <div className='logoutButton' >
+                    <div className='logoutButton'>
                         <a href={`${process.env.REACT_APP_HOST}/auth/logout`} >Logout</a>
                     </div>
                  </div>
@@ -46,9 +45,9 @@ class Dashboard extends Component {
                     <div className="badgeParent1">
                         <div className="badgeName"><div className="badge"></div>1 Day Finished</div>
                         <div className="badgeName"><div className="badge"></div>3 Day Finished</div>
-                        <div className="badgeName"><div className="badge"></div>1 Week Finished</div>
-                        <div className="badgeName"><div className="badge"></div>2 Weeks Finished</div>
-                        <div className="badgeName"><div className="badge"></div>3 Weeks Finished</div>
+                        <div className="badgeName"><div className="badge"></div>1 Day Finished</div>
+                        <div className="badgeName"><div className="badge"></div>2 Days Finished</div>
+                        <div className="badgeName"><div className="badge"></div>3 Days Finished</div>
                         <div className="badgeName"><div className="badge"></div>1 Month Finished</div>
                     </div>
 
@@ -60,14 +59,8 @@ class Dashboard extends Component {
                         <div className="badgeName"><div className="badge"></div>6 Months Finished</div>
                         <div className="badgeName"><div className="badge"></div>1 Year Finished</div>
                     </div>
+                    <Chart/>
                 </div>
-
-
-
-
-
-
-                
             </div>
 
         )

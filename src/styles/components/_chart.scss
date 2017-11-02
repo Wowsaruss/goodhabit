@@ -1,0 +1,10 @@
+
+.chartStyle {
+    @include flexSetUp(center, center, row);
+    @include width-height(100%, 700px);
+    background-color: white;
+}
+
+.chart {
+    @include width-height(100%, 100%);
+}
