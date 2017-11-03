@@ -4,9 +4,10 @@ class Goals extends Component {
     render() {
         return(
             <div>
-
+                <div className="BGgoals">
+                    <div>hi</div>
+                </div>
             </div>
-
         )
     }
 }
