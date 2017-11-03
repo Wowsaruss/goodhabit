@@ -572,6 +572,48 @@
   right: 0;
   left: 0; }
 
+.journal-page {
+  background-color: white;
+  width: 800px;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column; }
+
+.journal-input {
+  width: 600px;
+  height: 30px;
+  margin: 20px; }
+
+.submit-btn {
+  height: 50px;
+  width: 180px;
+  font-size: 25px;
+  background-color: #1e7ba3;
+  background: -webkit-linear-gradient(#1e7ba3, #0b3141);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#1e7ba3, #0b3141);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#1e7ba3, #0b3141);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#1e7ba3, #0b3141);
+  /* Standard syntax */
+  border-radius: 5px;
+  color: #e2e1e1;
+  text-shadow: 1.5px 1.5px #141414;
+  box-shadow: 2px 2px 2px #242424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  margin-top: 0px; }
+
+.submit-text {
+  padding: 10px;
+  margin: 10px; }
+
 .profileBG {
   padding: 0px;
   margin: 0px;

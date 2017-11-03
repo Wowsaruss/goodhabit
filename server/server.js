@@ -35,22 +35,10 @@ massive(process.env.CONNECTION_STRING)
 // REST ENDPOINTS
 //////////////////////////////////////////////////////////////////////////////////////////
 // GET
-    app.get('/api/profiles', (req, res) => {
-    req.app.get('db').get_profile( req.body.username, req.body.addiction_type, req.body.addiction_time).then(profile =>{
-        res.status(200).send(profile);
-    }).catch((err) => {console.log(err)})
-})
-
+    // app.get('/api/profiles', contoller.getProfileData);
 // POST
-    app.post('/api/profiles', (req, res) => {
-    const profileData = app.get('db')
-    req.app.get('db').create_profile([ req.body.username, req.body.addiction_type, req.body.addiction_date, req.body.first_name, req.body.last_name, req.body.sex, req.body.birthday, req.body.phone_number, req.body.profile_pic, req.body.about_me]).then(profile =>{
-        res.send()
-    })
-    .catch( function(err){
-        console.log(err)
-    })
-})
+    app.post('/api/profiles', controller.submitProfileData);
+    app.post('/api/journal', controller.submitJournalData);
 // PUT
 // DELETE
 //////////////////////////////////////////////////////////////////////////////////////////

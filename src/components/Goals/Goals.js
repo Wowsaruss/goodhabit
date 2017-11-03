@@ -30,7 +30,7 @@ class Goals extends Component {
 
         console.log(this.state)
         return(
-            <div>
+            <div></div>
                 <div className="BGgoals">
                     
                     <div className="headerGoals"><div className="goalsTitle">Goals</div></div>
