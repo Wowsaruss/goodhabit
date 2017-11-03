@@ -1,3 +1,20 @@
+.Landingbg {
+    padding: 0px;
+    margin: 0px;
+    height: 800px;
+    background-color: rgb(88, 88, 88);
+    background: -webkit-linear-gradient(rgb(88, 88, 88), black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(88, 88, 88), black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(88, 88, 88), black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(88, 88, 88), black); /* Standard syntax */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
 .landing-title {
     text-align: center;
     color: white;
@@ -12,7 +29,7 @@
             font-family: 'Pavanam', sans-serif;
             letter-spacing: 8px;
             font-weight: 600;
-            text-shadow: 2px 8px rgb(49, 49, 49);
+            text-shadow: 2px 8px rgb(36, 36, 36);
         }
 
         .subtitle {
@@ -28,13 +45,17 @@
             margin-top: 25px;
             height: 50px;
             width: 180px;
-            background-color: rgb(33, 100, 131);
+            background-color: rgb(30, 123, 163);
+            background: -webkit-linear-gradient(rgb(30, 123, 163), rgb(11, 49, 65)); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(rgb(30, 123, 163), rgb(11, 49, 65)); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(rgb(30, 123, 163), rgb(11, 49, 65)); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(rgb(30, 123, 163), rgb(11, 49, 65)); /* Standard syntax */
             box-shadow: 2px 2px 2px rgb(36, 36, 36);
             border-radius: 5px;
             @include flexSetUp (center, center, row);
             font-size: 20px;
             color: rgb(212, 212, 212);
-            text-shadow: 2px 2px rgb(20, 20, 20);
+            text-shadow: 1.5px 1.5px rgb(20, 20, 20);
             cursor: pointer;
             font-weight: bold;
         }
@@ -59,10 +80,14 @@
     height: 50px;
     width: 180px;
     font-size: 25px;
-    background-color: rgba(104, 102, 102, 0.493);
+    background-color: rgb(88, 88, 88);
+    background: -webkit-linear-gradient(rgba(88, 88, 88, 0.431), rgba(0, 0, 0, 0.267)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(88, 88, 88, 0.431), rgba(0, 0, 0, 0.267)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(88, 88, 88, 0.431), rgba(0, 0, 0, 0.267)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(88, 88, 88, 0.431), rgba(0, 0, 0, 0.267)); /* Standard syntax */
     border-radius: 5px;
     color: rgb(226, 225, 225);
-    text-shadow: 2px 2px rgb(20, 20, 20);
+    text-shadow: 1.5px 1.5px rgb(20, 20, 20);
     box-shadow: 2px 2px 2px rgb(36, 36, 36);
     @include flexSetUp (center, center, row);
     cursor: pointer;

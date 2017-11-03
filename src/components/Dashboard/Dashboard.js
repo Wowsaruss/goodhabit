@@ -39,8 +39,10 @@ class Dashboard extends Component {
         })
 
         return(
-            <div>
+            <div className="dashBG">
+                <div className="quotesParent">
                 <div className="quotes"><div>{this.state.quote}</div></div>
+                </div>
 
                 <div className="bg0Dash">
                     <div className="Welcome"> <h3>Welcome {profile},</h3>
@@ -50,7 +52,7 @@ class Dashboard extends Component {
                     <div className="dashboard">DASHBOARD</div>
                 
                     <div className='logoutButton1'>
-                    <div className='logoutButton'><a href={`${process.env.REACT_APP_HOST}/auth/logout`}>Logout</a></div>
+                    <a href={`${process.env.REACT_APP_HOST}/auth/logout`}><div className='logoutButton'>Logout</div></a>
                     </div>
                 </div>
 
@@ -122,17 +124,13 @@ class Dashboard extends Component {
                             <h3>An honest Journal aids in the recover process, as it allows an outlet for the feelings that we publically may not want to express.</h3>
                             <h3>Click on the Journal link below to begin writing about your recovering process.</h3></div>
                         </div>
-                        
-
                     </div>
-                    
 
+                        <div className="footerDash">
+                        <Link to="/goals" className="LinkD"><div className="footerDashGoals"> Goals </div></Link>
+                            <Link to="/journal" className="LinkD"><div className="footerDashGoals"> Journal </div></Link>
 
-
-
-
-
-                
+                        </div>  
             </div>
 
         )
