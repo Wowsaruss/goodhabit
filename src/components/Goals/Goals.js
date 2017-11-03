@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 class Goals extends Component {
     render() {
         return(
-            <div>
+            <div></div>
                 <div className="BGgoals">
                     
                     <div className="headerGoals"><div className="goalsTitle">Goals</div></div>
