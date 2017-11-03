@@ -10,5 +10,29 @@
     bottom: 0;
     right: 0;
     left: 0;
-    
+}
+
+.journal-page {
+    background-color: white;
+    @include width-height(800px, 100vh);
+    @include flexSetUp(flex-start, center, column);
+
+}
+
+.journal-input {
+    @include width-height(600px, 30px);
+    margin: 20px;
+}
+
+.submit-btn {
+    @include width-height(100px, 30px);
+    background-color: gray;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+}
+
+.submit-text {
+    padding: 10px;
+    margin: 10px;
 }

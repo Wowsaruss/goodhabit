@@ -20,7 +20,7 @@ class Profile extends Component {
         }
 
         postProfile(profile){
-          axios.post('http://localhost:3300/api/profiles', {
+          axios.post(`${process.env.REACT_APP_HOST}/api/profiles`, {
             username: this.state.username,
             addiction_type: this.state.type_input,
             addiction_date: this.state.time_input,
@@ -47,7 +47,7 @@ class Profile extends Component {
             this.setState({
                 type_input: input
             })      
-}
+        }
 
         updateSex(input){
             this.setState({
