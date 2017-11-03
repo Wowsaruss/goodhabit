@@ -25,14 +25,25 @@
 }
 
 .submit-btn {
-    @include width-height(100px, 30px);
-    background-color: gray;
+    height: 50px;
+    width: 180px;
+    font-size: 25px;
+    background-color: rgb(30, 123, 163);
+    background: -webkit-linear-gradient(rgb(30, 123, 163), rgb(11, 49, 65)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(30, 123, 163), rgb(11, 49, 65)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(30, 123, 163), rgb(11, 49, 65)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(30, 123, 163), rgb(11, 49, 65)); /* Standard syntax */
+    border-radius: 5px;
+    color: rgb(226, 225, 225);
+    text-shadow: 1.5px 1.5px rgb(20, 20, 20);
+    box-shadow: 2px 2px 2px rgb(36, 36, 36);
+    @include flexSetUp (center, center, row);
     cursor: pointer;
-    padding: 10px;
-    margin: 10px;
+    margin-top: 0px;
 }
 
 .submit-text {
     padding: 10px;
     margin: 10px;
 }
+

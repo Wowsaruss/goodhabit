@@ -1,5 +1,5 @@
 insert into journal
-(journal_entry)
+(journal_entry, user_id)
 values
-($1)
+($1, $2)
 RETURNING *;

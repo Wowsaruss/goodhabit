@@ -32,6 +32,7 @@ create table profile (
 
 CREATE TABLE journal (
     id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(id),
     journal_entry TEXT,
     date_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
