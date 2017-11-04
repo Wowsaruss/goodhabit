@@ -39,6 +39,7 @@ massive(process.env.CONNECTION_STRING)
 // POST
     app.post('/api/profiles', controller.submitProfileData);
     app.post('/api/journal', controller.submitJournalData);
+    app.post('/api/goals', controller.submitGoalData);
 // PUT
 // DELETE
 //////////////////////////////////////////////////////////////////////////////////////////

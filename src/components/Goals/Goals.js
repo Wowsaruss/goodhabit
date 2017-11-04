@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 
 class Goals extends Component {
         constructor () {
@@ -20,6 +21,23 @@ class Goals extends Component {
         }
     }
 
+    handleGoalSubmit() {
+        axios.post(`${process.env.REACT_APP_HOST}/api/goals`, {
+            oneday: this.state.oneday,
+            threeday: this.state.threeday,
+            oneweek: this.state.oneweek,
+            twoweek: this.state.twoweek,
+            threeweek: this.state.threeweek,
+            onemonth: this.state.onemonth,
+            twomonth: this.state.twomonth,
+            threemonth: this.state.threemonth,
+            fourmonth: this.state.fourmonth,
+            fivemonth: this.state.fivemonth,
+            sixmonth: this.state.sixmonth,
+            oneyear: this.state.oneyear
+        })
+    }
+
     handleGoalInput(e) {
         this.setState({
             [e.target.name]: e.target.value
@@ -30,7 +48,7 @@ class Goals extends Component {
 
         console.log(this.state)
         return(
-            <div></div>
+            <div>
                 <div className="BGgoals">
                     
                     <div className="headerGoals"><div className="goalsTitle">Goals</div></div>
@@ -50,7 +68,7 @@ class Goals extends Component {
                             <div className="plans"><div className="subGoals"> 5 Month Action Plan to Overcome Addiction:</div> <div><textarea name="fivemonth" value={this.state.fivemonth} type="text" onChange={(e) => this.handleGoalInput(e)}/></div></div>
                             <div className="plans"><div className="subGoals"> 6 Month Action Plan to Overcome Addiction:</div> <div><textarea name="sixmonth" value={this.state.sixmonth} type="text" onChange={(e) => this.handleGoalInput(e)}/></div></div>
                             <div className="plans"><div className="subGoals"> 1 Year Action Plan to Overcome Addiction:</div> <div><textarea name="oneyear" value={this.state.oneyear} type="text" onChange={(e) => this.handleGoalInput(e)}/></div></div>
-                            <div className="plans2"><div className="planbtn">Submit Goals</div></div>
+                            <div className="plans2"><div className="planbtn" onClick={() => this.handleGoalSubmit()}>Submit Goals</div></div>
                         </div>
                     </div>
                     <div className="footer">
