@@ -12,9 +12,18 @@ module.exports = {
 
     submitJournalData: (req, res) => {
         const db = req.app.get('db')
-        req.app.get('db').journal_entry([req.body.journal_entry]).then(profile => {
+        req.app.get('db').journal_entry([req.body.journal_entry, 1]).then(profile => {
             res.send("Hi")
         }).catch((err) => {console.log(err)})
+    },
+
+    submitGoalData: (req,res) => {
+        const db = req.app.get('db')
+        req.app.get('db').goals_input([req.body.oneday, req.body.threeday, req.body.oneweek, req.body.twoweek, 
+            req.body.threeweek, req.body.onemonth, req.body.twomonth, req.body.threemonth, req.body.fourmonth, 
+            req.body.fivemonth, req.body.sixmonth, req.body.oneyear, 1]).then(profile => {
+                res.send("hi")
+            }).catch((err) => {console.log(err)})
     },
 
     getProfileData: (req, res) => {
@@ -22,5 +31,4 @@ module.exports = {
             res.status(200).send(profile);
         }).catch((err) => {console.log(err)})
     }
-
 };
