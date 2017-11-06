@@ -15,6 +15,9 @@ class Journal extends Component {
         axios.post(`${process.env.REACT_APP_HOST}/api/journal`, {
             journal_entry: this.state.journalEntry
         })
+        this.setState({
+            journalEntry:''
+        })
       }
 
       handleJournalInput(input) {
@@ -34,7 +37,7 @@ class Journal extends Component {
                         <div className="mainJournal">
                             <div className="planTitle"><div>Create an Updated Journal</div></div>                        
 
-                                <div className="journalParent"><div className="textJournal"><textarea className="journal-input" type="text" onChange={(e) => this.handleJournalInput(e.target.value)} /></div></div>
+                                <div className="journalParent"><div className="textJournal"><textarea value={this.state.journalEntry} className="journal-input" type="text" onChange={(e) => this.handleJournalInput(e.target.value)} /></div></div>
                                 <div className="submitParentJour"><a><div className="submit-btn" onClick={() => this.handleJournalPost()} ><h3 className="submit-text" >Submit</h3></div></a></div>
                         </div>
                     </div>

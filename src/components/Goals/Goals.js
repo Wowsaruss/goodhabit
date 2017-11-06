@@ -35,7 +35,20 @@ class Goals extends Component {
             fivemonth: this.state.fivemonth,
             sixmonth: this.state.sixmonth,
             oneyear: this.state.oneyear
-        })
+        }).then(
+        this.setState({               
+        oneday: "",
+        threeday: "",
+        oneweek: "",
+        twoweek: "",
+        threeweek: "",
+        onemonth: "",
+        twomonth: "",
+        threemonth: "",
+        fourmonth: "",
+        fivemonth: "",
+        sixmonth: "",
+        oneyear: ""}))
     }
 
     handleGoalInput(e) {
