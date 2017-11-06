@@ -7,24 +7,40 @@ class Journal extends Component {
     constructor() {
         super()
         this.state = {
-            journalEntry: ''
+            journalEntry: '',
+            date: '',
+            time: ''
         }
       }
 
       handleJournalPost(post) {
         axios.post(`${process.env.REACT_APP_HOST}/api/journal`, {
-            journal_entry: this.state.journalEntry
+            journal_entry: this.state.journalEntry,
+            journal_date: this.state.date,
+            journal_time: this.state.time
         })
         this.setState({
-            journalEntry:''
+            journalEntry: '',
+            date: '',
+            time: ''
+        })
+      }
+      handleJournalInput(input) {
+        this.setState({
+            journalEntry: input
+        })
+      }
+      handleDate(input) {
+        this.setState({
+            date: input
+        })
+      }
+      handleTime(input) {
+        this.setState({
+            time: input
         })
       }
 
-      handleJournalInput(input) {
-          this.setState({
-            journalEntry: input
-          })
-      }
     
     render() {
         console.log(this.state);
@@ -36,9 +52,22 @@ class Journal extends Component {
                         <div className="sidebarJournal"></div>
                         <div className="mainJournal">
                             <div className="planTitle"><div>Create an Updated Journal</div></div>                        
-
-                                <div className="journalParent"><div className="textJournal"><textarea value={this.state.journalEntry} className="journal-input" type="text" onChange={(e) => this.handleJournalInput(e.target.value)} /></div></div>
-                                <div className="submitParentJour"><a><div className="submit-btn" onClick={() => this.handleJournalPost()} ><h3 className="submit-text" >Submit</h3></div></a></div>
+                                <div>
+                                    <input type='date' value={this.state.date} onChange={(e) => this.handleDate(e.target.value)}/>
+                                    <input type='time' value={this.state.time} onChange={(e) => this.handleTime(e.target.value)}/>
+                                </div>
+                                <div className="journalParent">
+                                    <div className="textJournal">
+                                        <textarea value={this.state.journalEntry} className="journal-input" type="text" onChange={(e) => this.handleJournalInput(e.target.value)} />
+                                    </div>
+                                </div>
+                                <div className="submitParentJour">
+                                    <a>
+                                        <div className="submit-btn" onClick={() => this.handleJournalPost()} >
+                                            <h3 className="submit-text" >Submit</h3>
+                                        </div>
+                                    </a>
+                                </div>
                         </div>
                     </div>
 

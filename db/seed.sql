@@ -34,7 +34,26 @@ CREATE TABLE journal (
     id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id),
     journal_entry TEXT,
+    journal_date TEXT,
+    journal_time TEXT,
     date_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE goals (
+    id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(id),
+    oneday TEXT,
+    threeday TEXT,
+    oneweek TEXT,
+    twoweek TEXT,
+    threeweek TEXT,
+    onemonth TEXT,
+    twomonth TEXT,
+    threemonth TEXT,
+    fourmonth TEXT,
+    fivemonth TEXT,
+    sixmonth TEXT,
+    oneyear TEXT
 );
 
 

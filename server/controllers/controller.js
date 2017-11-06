@@ -12,7 +12,7 @@ module.exports = {
 
     submitJournalData: (req, res) => {
         const db = req.app.get('db')
-        req.app.get('db').journal_entry([req.body.journal_entry, 1]).then(profile => {
+        req.app.get('db').journal_entry([req.body.journal_entry, 1, req.body.journal_date, req.body.journal_time]).then(profile => {
             res.send("Hi")
         }).catch((err) => {console.log(err)})
     },
