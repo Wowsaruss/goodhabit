@@ -30,5 +30,11 @@ module.exports = {
         req.app.get('db').get_profile( req.body.username, req.body.addiction_type, req.body.addiction_time).then(profile =>{
             res.status(200).send(profile);
         }).catch((err) => {console.log(err)})
+    },
+
+    getJournalData: (req, res) => {
+        req.app.get('db').get_journal().then(journal => {
+            res.status(200).send(journal);
+        }).catch((err) => {console.log(err)})
     }
 };

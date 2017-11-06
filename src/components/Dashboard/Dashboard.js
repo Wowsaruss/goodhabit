@@ -9,20 +9,25 @@ class Dashboard extends Component {
         super()
           this.state = {
             profile: [],
-            quote: ''
+            quote: '',
+            journalEntries: []
           }
         }
 
     componentDidMount(){
-        axios.get('http://localhost:3300/api/profiles').then(response => {
+        axios.get(`${process.env.REACT_APP_HOST}/api/profiles`).then(response => {
             this.setState({
                 profile: response.data
             })
         })
-
         axios.get(`http://quotes.rest/qod.json`).then(res => {
             this.setState({
                 quote: res.data.contents.quotes[0].quote
+            })
+        })
+        axios.get(`${process.env.REACT_APP_HOST}/api/journal`).then(response => {
+            this.setState({
+                journalEntries: response.data
             })
         })
     }
@@ -30,13 +35,22 @@ class Dashboard extends Component {
 
 
     render() {
-        var profile = this.state.profile.map((profile) => {
+        let journalEntries = this.state.journalEntries.map((journalEntries) => {
+            return (
+                <div>
+                    <h2>{journalEntries.journal_entry}</h2>
+                    <h3>{journalEntries.date_time}</h3>
+                </div>
+            )
+        })
+        let profile = this.state.profile.map((profile) => {
             return (
                 <div className='user-box/'>
                     <h3>{profile.username}</h3>
                  </div>
             )
         })
+
 
         return(
             <div className="dashBG">
@@ -112,7 +126,7 @@ class Dashboard extends Component {
                             
                             <div className="marginsCurrent">
                                 <div className="cGoals"></div>
-                                <div className="cJournal"></div>
+                                <div className="cJournal">{journalEntries}{}</div>
                             </div>
 
                         <div className="recoverProgress4">
