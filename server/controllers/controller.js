@@ -36,5 +36,12 @@ module.exports = {
         req.app.get('db').get_journal().then(journal => {
             res.status(200).send(journal);
         }).catch((err) => {console.log(err)})
+    },
+
+    getGoalsData: (req, res) => {
+        req.app.get('db').get_goals().then(goals => {
+            res.status(200).send(goals);
+        }).catch((err) => {console.log(err)})
     }
 };
+

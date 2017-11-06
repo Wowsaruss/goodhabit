@@ -10,7 +10,8 @@ class Dashboard extends Component {
           this.state = {
             profile: [],
             quote: '',
-            journalEntries: []
+            journalEntries: [],
+            goalEntries: []
           }
         }
 
@@ -30,6 +31,12 @@ class Dashboard extends Component {
                 journalEntries: response.data
             })
         })
+
+        axios.get(`${process.env.REACT_APP_HOST}/api/goals`).then(response => {
+            this.setState({
+                goalEntries: response.data
+            })
+        })
     }
 
 
@@ -40,6 +47,15 @@ class Dashboard extends Component {
                 <div>
                     <h2>{journalEntries.journal_entry}</h2>
                     <h3>{journalEntries.date_time}</h3>
+                </div>
+            )
+        })
+
+        let goalEntries = this.state.goalEntries.map((goalEntries) => {
+            return (
+                <div>
+                    <h2>{goalEntries.oneday}</h2>
+                        {goalEntries.threeday}
                 </div>
             )
         })
@@ -125,8 +141,8 @@ class Dashboard extends Component {
                             </div>
                             
                             <div className="marginsCurrent">
-                                <div className="cGoals"></div>
-                                <div className="cJournal">{journalEntries}{}</div>
+                                <div className="cGoals">{goalEntries}</div>
+                                <div className="cJournal">{journalEntries}</div>
                             </div>
 
                         <div className="recoverProgress4">

@@ -37,6 +37,7 @@ massive(process.env.CONNECTION_STRING)
 // GET
     // app.get('/api/profiles', contoller.getProfileData);
     app.get('/api/journal', controller.getJournalData);
+    app.get('/api/goals', controller.getGoalsData);
 // POST
     app.post('/api/profiles', controller.submitProfileData);
     app.post('/api/journal', controller.submitJournalData);
