@@ -39,7 +39,7 @@
 
 .mainJournal {
     width: 60%;
-    height: 800px;
+    height: 900px;
     margin-left: 150px;
     background-color: white;
     border-radius: 8px;
@@ -51,6 +51,7 @@
     @include flexSetUp (center, center, row);
     margin-top: 70px;
     font-size: 30px;
+    margin-bottom: 25px;
 }
 
 .submitParentJour {
@@ -143,14 +144,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0px;
+    padding: 0px;
         textarea {
             margin-top: 50px;
             width: 800px;
             height: 500px;
             font-size: 18px;
+            margin: 0px;
+            padding: 0px;
         }
 }
 
 .journal-input {
-    
+    margin: 0px;
+    padding: 0px;
+}
+
+.dateTime {
+    text-align: center;
+    margin-bottom: 10px;
+    div {
+        margin-top: 8px;
+    }
 }
