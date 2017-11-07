@@ -43,8 +43,8 @@ class Dashboard extends Component {
         let journalEntries = this.state.journalEntries.map((journalEntries) => {
             return (
                 <div>
-                    <h2>{journalEntries.journal_entry}</h2>
-                    <h3>{journalEntries.date_time}</h3>
+                    <h2>{journalEntries.journal_date}&emsp;{journalEntries.journal_time}</h2>
+                    <h4>{journalEntries.journal_entry}</h4>
                 </div>
             )
         })

@@ -52,8 +52,10 @@ class Journal extends Component {
                         <div className="sidebarJournal"></div>
                         <div className="mainJournal">
                             <div className="planTitle"><div>Create an Updated Journal</div></div>                        
-                                <div>
-                                    <input type='date' value={this.state.date} onChange={(e) => this.handleDate(e.target.value)}/>
+                                <div className='dateTime'>
+                                    <div>Date</div>
+                                    <input className='date' type='date' value={this.state.date} onChange={(e) => this.handleDate(e.target.value)}/>
+                                    <div>Time</div>
                                     <input type='time' value={this.state.time} onChange={(e) => this.handleTime(e.target.value)}/>
                                 </div>
                                 <div className="journalParent">
