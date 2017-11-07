@@ -39,8 +39,6 @@ class Dashboard extends Component {
         })
     }
 
-
-
     render() {
         let journalEntries = this.state.journalEntries.map((journalEntries) => {
             return (
