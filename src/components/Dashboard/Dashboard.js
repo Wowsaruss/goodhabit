@@ -52,21 +52,86 @@ class Dashboard extends Component {
     }
 
     render() {
+
         let journalEntries = this.state.journalEntries.map((journalEntries) => {
             return (
                 <div>
-                    <h2>{journalEntries.journal_date}&emsp;{journalEntries.journal_time}</h2>
-                    <h4>{journalEntries.journal_entry}</h4>
+                    <div className="jtitleParent">
+                        <div className="jourDate"><span>Title:&emsp;</span><span>Date:&emsp;</span>{journalEntries.journal_date}&emsp;&emsp;<span>Time:&emsp;</span>{journalEntries.journal_time}</div>
+                        <div className="deleteBtn"> X </div>
+                    </div>
+                        <div className="jourEntries">{journalEntries.journal_entry}</div>
                 </div>
             )
         })
 
         let goalEntries = this.state.goalEntries.map((goalEntries) => {
             return (
-                <div>
-                    <h2>{goalEntries.oneday}</h2>
-                        {goalEntries.threeday}
+            <div>
+                <div className="gtitleParent">
+                    <div className="goalsDay">Day 1 Goal:&emsp;</div>
+                    <div className="deleteGoals">Clear Goals</div><div className="deleteBtn2"> X </div>
                 </div>
+                    <div className="gday">{goalEntries.oneday}</div>
+
+                <div className="gtitleParent">
+                    <div className="goalsDay">Day 3 Goal:&emsp;</div>
+                </div>
+                    <div className="gday">{goalEntries.threeday}</div>
+            
+                <div className="gtitleParent">
+                    <div className="goalsDay">Week 1 Goal:&emsp;</div>
+                </div>
+                    <div className="gday">{goalEntries.oneweek}</div>
+
+                    <div className="gtitleParent">
+                    <div className="goalsDay">Week 2 Goal:&emsp;</div>
+                </div>
+                    <div className="gday">{goalEntries.twoweek}</div>
+
+                    <div className="gtitleParent">
+                    <div className="goalsDay">Week 3 Goal:&emsp;</div>
+                </div>
+                    <div className="gday">{goalEntries.threeweek}</div>
+
+                    <div className="gtitleParent">
+                    <div className="goalsDay">Month 1 Goal:&emsp;</div>
+                </div>
+                    <div className="gday">{goalEntries.onemonth}</div>
+
+                    <div className="gtitleParent">
+                    <div className="goalsDay">Month 2 Goal:&emsp;</div>
+                </div>
+                    <div className="gday">{goalEntries.twomonth}</div>
+
+                    <div className="gtitleParent">
+                    <div className="goalsDay">Month 3 Goal:&emsp;</div>
+                </div>
+                    <div className="gday">{goalEntries.threemonth}</div>
+
+                    <div className="gtitleParent">
+                    <div className="goalsDay">Month 4 Goal:&emsp;</div>
+                </div>
+                    <div className="gday">{goalEntries.fourmonth}</div>
+
+                    <div className="gtitleParent">
+                    <div className="goalsDay">Month 5 Goal:&emsp;</div>
+                </div>
+                    <div className="gday">{goalEntries.fivemonth}</div>
+
+                    <div className="gtitleParent">
+                    <div className="goalsDay">Month 6 Goal:&emsp;</div>
+                </div>
+                    <div className="gday">{goalEntries.sixmonth}</div>
+
+                    <div className="gtitleParent">
+                    <div className="goalsDay">1 year Goal:&emsp;</div>
+                </div>
+                    <div className="gday">{goalEntries.oneyear}</div>
+                    
+                <div>
+                </div>
+            </div>
             )
         })
         let profile = this.state.profile.map((profile) => {
@@ -155,7 +220,9 @@ class Dashboard extends Component {
                                     <h3>They are methods by which we can strive to better ourselves and replace negative addictions with positive habits.</h3>
                                 </div>
                                 <div className="cGoals">
+                                <div className="overflow">
                                     <div>{goalEntries}</div>
+                                </div>
                                 </div>
                         
                                 <div className="marginsTitle1">Journal Entries</div>
@@ -164,7 +231,13 @@ class Dashboard extends Component {
                                     <h3>Be sure to write in your journal everyday. To begin writing about your recovering process.<br/><Link className="goalLink" to="/journal"><span>Click Here</span></Link></h3>
                                     <h3>An honest Journal aids in the recover process, as it allows an outlet for the feelings that we publically may not want to express.</h3>
                                 </div>
-                                <div className="cJournal">{journalEntries}</div>
+
+                                
+                                <div className="cJournal">
+                                <div className="overflow">
+                                    <div>{journalEntries}</div>
+                                </div>
+                                </div>
                             </div>
                     
                     

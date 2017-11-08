@@ -259,24 +259,41 @@
 
 .cGoals {
         margin-top: -10px;
+        background-color: rgb(236, 224, 204);
         width:1300px;
         height: 600px;
-        background-color: white;
         box-shadow: 5px 5px 5px rgb(44, 44, 44);
         border-radius: 8px;
         overflow: auto;
         color: black;
+        overflow: hidden;
+        ::-webkit-scrollbar {
+            display: none;
+            width: 0px;
+            background: transparent;
+        }
 }
 
 .cJournal {
         width: 1300px;
         height: 600px;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(236, 224, 204);
         box-shadow: 5px 5px 5px rgb(44, 44, 44);
         border-radius: 8px;
-        overflow: auto;
         margin-bottom: 80px;
         color: black;
+        overflow: hidden;
+        ::-webkit-scrollbar {
+            display: none;
+            width: 0px;
+            background: transparent;
+        }
+}
+
+.overflow {
+    overflow: auto;
+    width: 1300px;
+    height: 600px;
 }
 
 .footerDash {
@@ -303,3 +320,102 @@
     text-decoration: none;
 }
 
+.jtitleParent {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.jourDate {
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 500px;
+    font-size: 20px;
+    font-style: italic;
+
+        span {
+            width: 300px;
+            font-size: 22px;
+            font-weight: 900;
+            color: rgb(27, 112, 151);
+            text-shadow: 1px 1px rgb(75, 75, 75); 
+        }
+}
+
+.jourEntries {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    line-height: 20px;
+    border: 1px solid lightgray;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 1.5px 1.5px 1.5px black;
+    border-radius: 8px;
+    color: rgb(61, 35, 1);
+}
+
+.deleteBtn {
+    margin-top: 35px;
+    margin-left: 650px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    background-color: rgb(27, 112, 151);
+    color: white;
+    text-shadow: 2px 2px black;
+    @include flexSetUp (center, center, row);
+    box-shadow: 1.5px 1.5px 1.5px black;
+    cursor: pointer;
+}
+
+.gtitleParent {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.gday {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    line-height: 20px;
+    border: 1px solid lightgray;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 1.5px 1.5px 1.5px black;
+    border-radius: 8px;
+    color: rgb(61, 35, 1);
+}
+
+.goalsDay {
+        margin-top: 30px;
+        margin-left: 50px;
+        font-style: italic;
+        font-size: 22px;
+        font-weight: 900;
+        color: rgb(27, 112, 151);
+        text-shadow: 1px 1px rgb(75, 75, 75); 
+}
+
+    .deleteGoals {
+        margin-top: 30px;
+        margin-left: 900px;
+    }
+
+    .deleteBtn2 {
+        margin-top: 22px;
+        margin-left: 20px;
+        height: 30px;
+        width: 30px;
+        border-radius: 100px;
+        background-color: rgb(27, 112, 151);
+        color: white;
+        text-shadow: 2px 2px black;
+        @include flexSetUp (center, center, row);
+        box-shadow: 1.5px 1.5px 1.5px black;
+        cursor: pointer;
+    }
