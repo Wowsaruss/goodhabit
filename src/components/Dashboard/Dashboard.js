@@ -26,6 +26,7 @@ class Dashboard extends Component {
             goalEntries: []
           }
         }
+        
 
     componentDidMount(){
         axios.get(`${process.env.REACT_APP_HOST}/api/profiles`).then(response => {
@@ -130,6 +131,7 @@ class Dashboard extends Component {
                         <img src={month6}/></div>6 Months Finished</div>  
                     </div>
                 </div>
+                <div className='stopwatch'>
 
                     <div className="graphParent">
                         <hr />
