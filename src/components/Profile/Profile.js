@@ -20,7 +20,7 @@ class Profile extends Component {
         }
 
         postProfile(profile){
-          axios.post(`${process.env.REACT_APP_HOST}/api/profiles`, {
+          axios.post(`http://localhost:3300/api/profiles`, {
             username: this.state.username,
             addiction_type: this.state.type_input,
             addiction_date: this.state.time_input,

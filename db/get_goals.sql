@@ -1,2 +1,3 @@
 select *
-from goals;
+from goals
+where userId = $1

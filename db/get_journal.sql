@@ -1,2 +1,3 @@
 select *
-from journal;
+from journal
+where userId =$1
