@@ -6,14 +6,14 @@ class Profile extends Component {
     constructor() {
         super()
           this.state = {
+            first_name: '',
+            last_name: '',
+            sex: '',
+            birthday: '',
             username: '',
             time_input: '',
             type_input: '',
-            sex: '',
-            birthday: '',
             phone: '',
-            first_name: '',
-            last_name: '',
             profile_picture: '',
             about_me: ''
           }
@@ -21,16 +21,30 @@ class Profile extends Component {
 
         postProfile(profile){
           axios.post(`${process.env.REACT_APP_HOST}/api/profiles`, {
-            username: this.state.username,
-            addiction_type: this.state.type_input,
-            addiction_date: this.state.time_input,
-            sex: this.state.sex,
-            birthday: this.state.birthday,
-            phone_number: this.state.phone,
             first_name: this.state.first_name,
             last_name: this.state.last_name,
-            profile_pic: this.state.profile_picture,
-            about_me: this.state.about_me
+            sex: this.state.sex,
+            birthday: this.state.birthday,
+            username: this.state.username,
+            addiction_date: this.state.time_input,
+            addiction_type: this.state.type_input,
+            phone_number: this.state.phone,
+            about_me: this.state.about_me,
+            profile_pic: this.state.profile_picture
+
+          })
+          alert("Profile Saved")
+          this.setState({
+              first_name: "",
+              last_name: "",
+              sex: "",
+              birthday: "",
+              username: "",
+              time_input: "",
+              type_input: "",
+              phone_number: "",
+              about_me: "",
+              profile_pic: ""
           })
         }
         updateUsername(input){
@@ -104,23 +118,23 @@ class Profile extends Component {
                 <div className="selectionBG">
                     <div className='profile-box'>
                         <div className="Row"> 
-                            <div className="FRclass">First Name <br/><br/><input onChange={(e) => this.updateFirstName(e.target.value)}   type="text" placeholder="First Name"/></div>
-                            <div className="FRclass">Last Name <br/><br/><input onChange={(e) => this.updateLastName(e.target.value)}  type="text" placeholder="Last Name"/></div>
+                            <div className="FRclass">First Name <br/><br/><input onChange={(e) => this.updateFirstName(e.target.value)} value={this.state.first_name} type="text" placeholder="First Name"/></div>
+                            <div className="FRclass">Last Name <br/><br/><input onChange={(e) => this.updateLastName(e.target.value)} value={this.state.last_name}  type="text" placeholder="Last Name"/></div>
                             <div className="FRclass">Sex<br/><br/>
-                                <select  onChange={(e) => this.updateSex(e.target.value)} >
+                                <select  onChange={(e) => this.updateSex(e.target.value)} value={this.state.sex}>
                                     <option value="">Select</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                 </select>
                             </div> 
-                            <div className="FRclass">Birthday <br/><br/><input onChange={(e) => this.updateBirthday(e.target.value)}  type="date" /></div>  
+                            <div className="FRclass">Birthday <br/><br/><input onChange={(e) => this.updateBirthday(e.target.value)} value={this.state.birthday} type="date" /></div>  
                         </div>
                        
                         <div className="Row"> 
-                            <div className="FRclass">Username <br/><br/><input onChange={(e) => this.updateUsername(e.target.value)}type='text' placeholder='enter a username...' /></div>
-                            <div className="FRclass">Estimated Start of Addiction?<br/><br/><input onChange={(e) => this.updateTime(e.target.value)} type='date' placeholder='Enter a time' /></div>
+                            <div className="FRclass">Username <br/><br/><input onChange={(e) => this.updateUsername(e.target.value)}type='text' placeholder='enter a username...' value={this.state.username}/></div>
+                            <div className="FRclass">Estimated Start of Addiction?<br/><br/><input onChange={(e) => this.updateTime(e.target.value)} type='date' placeholder='Enter a time' value={this.state.time_input} /></div>
                             <div className="FRclass">Addiction type <br/><br/>
-                                <select onChange={(e) => this.updateType(e.target.value)}>
+                                <select onChange={(e) => this.updateType(e.target.value)} value={this.state.type_input}>
                                     <option value=''>Select</option>
                                     <option value='Alcohol'>Alcohol</option>
                                     <option value='Drugs'>Drugs / Perscription</option>
@@ -130,17 +144,18 @@ class Profile extends Component {
                                     <option value='Other'>Other</option>
                                 </select> 
                             </div>
-                            <div className="FRclass">Phone Number<br/><br/><input  onChange={(e) => this.updatePhone(e.target.value)}  type="text" placeholder="Phone Number"/></div> 
+                            <div className="FRclass">Phone Number<br/><br/><input  onChange={(e) => this.updatePhone(e.target.value)}  type="text" placeholder="Phone Number" value={this.state.phone_number}/></div> 
                         </div>
                             
                         <div className="Row2">
-                            <div className="FR2class">About Me<br/><br/><textarea type="text" onChange={(e)=>this.updateAbout(e.target.value)}/></div>
-                            <div className="FR2class">Profile Picture <br/><br/><input onChange={(e) => this.updatePicture(e.target.value)}  type="file"/></div>
+                            <div className="FR2class">About Me<br/><br/><textarea type="text" onChange={(e)=>this.updateAbout(e.target.value)} value={this.state.about_me}/></div>
+                            <div className="FR2class">Profile Picture <br/><br/><input onChange={(e) => this.updatePicture(e.target.value)}  type="file" value={this.state.profile_pic}/></div>
                             <div className="PicBox"></div>
                         </div>   
 
                         <div className="savePParent">
-                                    <div><Link to='/dashboard' className="saveP"><div onClick={() => this.postProfile()}>Save Profile</div></Link></div>
+                                    <div className="saveP"><div onClick={() => this.postProfile()}>Save Profile</div></div>
+                                    <div><Link to='/dashboard' className="saveP">Dashboard</Link></div>
                         </div>  
                     </div>
                 </div>
