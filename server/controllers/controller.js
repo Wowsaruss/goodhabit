@@ -1,7 +1,7 @@
 module.exports = {
 
     submitProfileData: (req, res) => {
-        const profileData = app.get('db')
+        const profileData = req.app.get('db')
         req.app.get('db').create_profile([ req.body.username, req.body.addiction_type, req.body.addiction_date, req.body.first_name, req.body.last_name, req.body.sex, req.body.birthday, req.body.phone_number, req.body.profile_pic, req.body.about_me]).then(profile => {
             res.send()
         })

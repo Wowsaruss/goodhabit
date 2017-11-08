@@ -154,7 +154,9 @@ class Dashboard extends Component {
                                     <h3>It is important that before you begin you set realistic goals. To set or change a goal,<br/><Link className="goalLink" to="/goals"><span>Click Here</span></Link></h3>
                                     <h3>They are methods by which we can strive to better ourselves and replace negative addictions with positive habits.</h3>
                                 </div>
-                                <div className="cGoals">{goalEntries}</div>
+                                <div className="cGoals">
+                                    <div>{goalEntries}</div>
+                                </div>
                         
                                 <div className="marginsTitle1">Journal Entries</div>
                                 <div className="recoverProgress5">
