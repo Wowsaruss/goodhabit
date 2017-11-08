@@ -498,23 +498,37 @@
 
 .cGoals {
   margin-top: -10px;
+  background-color: #ece0cc;
   width: 1300px;
   height: 600px;
-  background-color: white;
   box-shadow: 5px 5px 5px #2c2c2c;
   border-radius: 8px;
   overflow: auto;
-  color: black; }
+  color: black;
+  overflow: hidden; }
+  .cGoals ::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    background: transparent; }
 
 .cJournal {
   width: 1300px;
   height: 600px;
-  background-color: white;
+  background-color: #ece0cc;
   box-shadow: 5px 5px 5px #2c2c2c;
   border-radius: 8px;
-  overflow: auto;
   margin-bottom: 80px;
-  color: black; }
+  color: black;
+  overflow: hidden; }
+  .cJournal ::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    background: transparent; }
+
+.overflow {
+  overflow: auto;
+  width: 1300px;
+  height: 600px; }
 
 .footerDash {
   width: 100%;
@@ -542,6 +556,101 @@
 
 .LinkD {
   text-decoration: none; }
+
+.jtitleParent {
+  display: flex;
+  justify-content: flex-start; }
+
+.jourDate {
+  margin-top: 30px;
+  margin-left: 50px;
+  width: 500px;
+  font-size: 20px;
+  font-style: italic; }
+  .jourDate span {
+    width: 300px;
+    font-size: 22px;
+    font-weight: 900;
+    color: #1b7097;
+    text-shadow: 1px 1px #4b4b4b; }
+
+.jourEntries {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  line-height: 20px;
+  border: 1px solid lightgray;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 1.5px 1.5px 1.5px black;
+  border-radius: 8px;
+  color: #3d2301; }
+
+.deleteBtn {
+  margin-top: 35px;
+  margin-left: 650px;
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  background-color: #1b7097;
+  color: white;
+  text-shadow: 2px 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  box-shadow: 1.5px 1.5px 1.5px black;
+  cursor: pointer; }
+
+.gtitleParent {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row; }
+
+.gday {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  line-height: 20px;
+  border: 1px solid lightgray;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 1.5px 1.5px 1.5px black;
+  border-radius: 8px;
+  color: #3d2301; }
+
+.goalsDay {
+  margin-top: 30px;
+  margin-left: 50px;
+  font-style: italic;
+  font-size: 22px;
+  font-weight: 900;
+  color: #1b7097;
+  text-shadow: 1px 1px #4b4b4b; }
+
+.deleteGoals {
+  margin-top: 30px;
+  margin-left: 900px; }
+
+.deleteBtn2 {
+  margin-top: 22px;
+  margin-left: 20px;
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  background-color: #1b7097;
+  color: white;
+  text-shadow: 2px 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  box-shadow: 1.5px 1.5px 1.5px black;
+  cursor: pointer; }
 
 .BGjournal {
   background-color: #585858;
