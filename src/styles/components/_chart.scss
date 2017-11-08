@@ -2,7 +2,8 @@
 .chartStyle {
     @include flexSetUp(center, center, row);
     @include width-height(100%, 700px);
-    background-color: white;
+    color: white;
+    font-size: 30px;
 }
 
 .chart {
