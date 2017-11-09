@@ -9,7 +9,8 @@ class Journal extends Component {
         this.state = {
             journalEntry: '',
             date: '',
-            time: ''
+            time: '',
+            title: ''
         }
       }
 
@@ -17,12 +18,14 @@ class Journal extends Component {
         axios.post(`${process.env.REACT_APP_HOST}/api/journal`, {
             journal_entry: this.state.journalEntry,
             journal_date: this.state.date,
-            journal_time: this.state.time
+            journal_time: this.state.time,
+            journal_title: this.state.title
         })
         this.setState({
             journalEntry: '',
             date: '',
-            time: ''
+            time: '',
+            title: ''
         })
       }
       handleJournalInput(input) {
@@ -41,6 +44,12 @@ class Journal extends Component {
         })
       }
 
+      handleTitle(input) {
+              this.setState({
+                  title: input
+              })
+      }
+
     
     render() {
         console.log(this.state);
@@ -53,10 +62,12 @@ class Journal extends Component {
                         <div className="mainJournal">
                             <div className="planTitle"><div>Create an Updated Journal</div></div>                        
                                 <div className='dateTime'>
-                                    <div>Date</div>
-                                    <input className='date' type='date' value={this.state.date} onChange={(e) => this.handleDate(e.target.value)}/>
-                                    <div>Time</div>
-                                    <input type='time' value={this.state.time} onChange={(e) => this.handleTime(e.target.value)}/>
+                                    <div>Title&emsp;&emsp;</div>
+                                    <div><input className="titleJournal" type="text" value={this.state.title} onChange={(e) => this.handleTitle(e.target.value)}/></div>
+                                    <div>&emsp;&emsp;Date&emsp;&emsp;</div>
+                                    <div><input className='date' type='date' value={this.state.date} onChange={(e) => this.handleDate(e.target.value)}/></div>
+                                    <div>&emsp;&emsp;Time&emsp;&emsp;</div>
+                                    <div><input type='time' value={this.state.time} onChange={(e) => this.handleTime(e.target.value)}/></div>
                                 </div>
                                 <div className="journalParent">
                                     <div className="textJournal">
