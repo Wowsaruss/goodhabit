@@ -38,12 +38,16 @@ massive(process.env.CONNECTION_STRING)
     // app.get('/api/profiles', contoller.getProfileData);
     app.get('/api/journal', controller.getJournalData);
     app.get('/api/goals', controller.getGoalsData);
+    app.get('/api/profiles', controller.getProfileData)
 // POST
     app.post('/api/profiles', controller.submitProfileData);
     app.post('/api/journal', controller.submitJournalData);
     app.post('/api/goals', controller.submitGoalData);
 // PUT
+    app.put('/api/goals', controller.updateGoalsData);
 // DELETE
+    app.delete('/api/journal', controller.deleteJournalData);
+    app.delete('/api/goals', controller.deleteGoalsData);
 //////////////////////////////////////////////////////////////////////////////////////////
 
 // AUTH0

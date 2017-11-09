@@ -3,6 +3,15 @@ import {Link} from 'react-router-dom';
 
 class AboutUs extends Component {
     render() {
+        const stopStyle = {
+            containerOutter: {
+              width: '250px',
+              height: '250px'
+            },
+            containerInner: {
+              lineHeight: '10'
+            }
+          }
         return(
            <div> 
             <div className="aboutbg">
@@ -12,7 +21,7 @@ class AboutUs extends Component {
                         <div className="aboutBG"><div className="stripeBG"><Link to="/"><div className="return">Back to Start</div></Link></div>
                             <div className="aboutDes1">
                                 <div className="aboutDes2">
-                                
+ 
                                 <h3>What is Resolve all about?</h3>
                                 <div className="paragraphs">
                                 "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
