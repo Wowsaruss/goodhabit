@@ -1,2 +1,3 @@
 select *
-from journal;
+from journal
+ORDER BY journal_date ASC;
