@@ -837,10 +837,16 @@
   padding: 0px; }
 
 .dateTime {
-  text-align: center;
+  display: flex;
+  justify-content: center center row;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-left: 70px;
   margin-bottom: 10px; }
-  .dateTime div {
-    margin-top: 8px; }
+
+.titleJournal {
+  width: 250px; }
 
 .profileBG {
   padding: 0px;

@@ -162,9 +162,12 @@
 }
 
 .dateTime {
-    text-align: center;
-    margin-bottom: 10px;
-    div {
-        margin-top: 8px;
-    }
+  @include flexSetUp(center center row);
+  margin-top: 50px;
+  margin-left: 70px;
+  margin-bottom: 10px;
+}
+
+.titleJournal {
+    width: 250px;
 }
