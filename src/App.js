@@ -9,11 +9,14 @@ import Goals from './components/Goals/Goals.js';
 import Editprofile from './components/EditProfile/editprofile.js'
 
 class App extends Component {
+
+  
+
   render() {
     return (
       <div>
         <Switch>
-          <Route exact path='/' component={Landing} />
+          <Route exact path='/' component={Landing}/>
           <Route path ='/aboutus' component={AboutUs}/>
           <Route path='/profile' component={Profile}/>
           <Route path='/dashboard' component={Dashboard}/>

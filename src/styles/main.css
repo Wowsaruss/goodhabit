@@ -503,7 +503,8 @@
   background-color: white;
   box-shadow: 5px 5px 5px #2c2c2c;
   border-radius: 8px;
-  overflow: auto; }
+  overflow: auto;
+  color: black; }
 
 .cJournal {
   width: 1300px;
@@ -512,7 +513,8 @@
   box-shadow: 5px 5px 5px #2c2c2c;
   border-radius: 8px;
   overflow: auto;
-  margin-bottom: 80px; }
+  margin-bottom: 80px;
+  color: black; }
 
 .footerDash {
   width: 100%;

@@ -131,7 +131,7 @@ class Dashboard extends Component {
                         <img src={month6}/></div>6 Months Finished</div>  
                     </div>
                 </div>
-                <div className='stopwatch'>
+
 
                     <div className="graphParent">
                         <hr />
