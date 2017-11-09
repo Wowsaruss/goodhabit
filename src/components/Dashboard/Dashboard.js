@@ -32,23 +32,29 @@ class Dashboard extends Component {
             this.setState({
                 profile: response.data
             })
-        })
+        });
         axios.get(`http://quotes.rest/qod.json`).then(res => {
             this.setState({
                 quote: res.data.contents.quotes[0].quote
             })
-        })
+        });
         axios.get(`${process.env.REACT_APP_HOST}/api/journal`).then(response => {
             this.setState({
                 journalEntries: response.data
             })
-        })
-
+        });
         axios.get(`${process.env.REACT_APP_HOST}/api/goals`).then(response => {
             this.setState({
                 goalEntries: response.data
             })
-        })
+        });
+    }
+    handleJournalDelete(journal) {
+        axios.delete(`${process.env.REACT_APP_HOST}/api/journal/${journal}`).then(res => {
+            this.setState({
+                journalEntries: res.data
+            })
+        });
     }
 
     render() {
@@ -57,8 +63,8 @@ class Dashboard extends Component {
             return (
                 <div>
                     <div className="jtitleParent">
-                        <div className="jourDate"><span>Title:&emsp;</span><span>Date:&emsp;</span>{journalEntries.journal_date}&emsp;&emsp;<span>Time:&emsp;</span>{journalEntries.journal_time}</div>
-                        <div className="deleteBtn"> X </div>
+                        <div className="jourDate"><span>Title:&emsp;</span>{journalEntries.journal_title}&emsp;&emsp;<span>Date:&emsp;</span>{journalEntries.journal_date}&emsp;&emsp;<span>Time:&emsp;</span>{journalEntries.journal_time}</div>
+                        <div className="deleteBtn" onClick={(e) => this.handleJournalDelete(journalEntries.id)} > X </div>
                     </div>
                         <div className="jourEntries">{journalEntries.journal_entry}</div>
                 </div>
