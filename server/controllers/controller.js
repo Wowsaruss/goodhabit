@@ -35,15 +35,33 @@ module.exports = {
     },
 
     getJournalData: (req, res) => {
-        req.app.get('db').get_journal([req.user.id]).then(journal => {
+        req.app.get('db').get_journal([]).then(journal => {
             res.status(200).send(journal);
         }).catch((err) => {console.log(err)})
     },
 
     getGoalsData: (req, res) => {
-        req.app.get('db').get_goals([req.user.id]).then(goals => {
+        req.app.get('db').get_goals(1).then(goals => {
             res.status(200).send(goals);
         }).catch((err) => {console.log(err)})
+    },
+
+    deleteJournalData: (req, res) => {
+        req.app.get('db').delete_journal(req.body.id, 1).then(journal => {
+            res.status(200).send(journal);
+        }).catch((err) => {console.log(err)})
+    },
+
+    deleteGoalsData: (req, res) => {
+        req.app.get('db').delete_goals(req.body.id, 1).then(goals => {
+            res.status(200).send(goals);
+        }).catch((err) => {console.log(err)})
+    },
+
+    updateGoalsData: (req, res) => {
+        req.app.get('db').update_goals(req.body.id, 1).then(goals => {
+            res.status(200).send(goals)
+        })
     }
 };
 
