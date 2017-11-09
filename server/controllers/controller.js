@@ -59,9 +59,15 @@ module.exports = {
     },
 
     updateGoalsData: (req, res) => {
-        req.app.get('db').update_goals(req.body.id, 1).then(goals => {
+        req.app.get('db').update_goals(req.params.id, req.body.oneday,
+            req.body.threeday,req.body.oneweek,
+            req.body.twoweek,req.body.threeweek,
+            req.body.onemonth,req.body.twomonth,
+            req.body.threemonth,req.body.fourmonth,
+            req.body.fivemonth,req.body.sixmonth,
+            req.body.oneyear).then(goals => {
             res.status(200).send(goals)
-        })
+        }).catch((err)=> {console.log((err))})
     }
 };
 
