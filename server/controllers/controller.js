@@ -14,7 +14,7 @@ module.exports = {
 
     submitJournalData: (req, res) => {
         const db = req.app.get('db')
-        req.app.get('db').journal_entry([req.user.id, req.body.journal_entry, req.body.journal_date, req.body.journal_time]).then(profile => {
+        req.app.get('db').journal_entry([req.body.journal_entry, req.body.journal_date, req.body.journal_time, req.body.journal_title]).then(profile => {
             res.send("Hi")
         }).catch((err) => {console.log(err)})
     },
@@ -47,14 +47,18 @@ module.exports = {
     },
 
     deleteJournalData: (req, res) => {
-        req.app.get('db').delete_journal(req.body.id, 1).then(journal => {
-            res.status(200).send(journal);
+        req.app.get('db').delete_journal(req.params.id).then(journal => {
+            req.app.get('db').get_journal().then(journal => {
+                res.status(200).send(journal);
+            })
         }).catch((err) => {console.log(err)})
     },
 
     deleteGoalsData: (req, res) => {
-        req.app.get('db').delete_goals(req.body.id, 1).then(goals => {
-            res.status(200).send(goals);
+        req.app.get('db').delete_goals(req.params.id).then(goals => {
+            req.app.get('db').get_goals().then(goal => {
+                res.status(200).send(goal);
+            })
         }).catch((err) => {console.log(err)})
     },
 
