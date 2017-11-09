@@ -1,2 +1,1 @@
-SELECT * FROM goals
-WHERE user_id = $1;
+SELECT * FROM goals;
