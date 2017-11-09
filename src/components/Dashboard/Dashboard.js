@@ -57,6 +57,13 @@ class Dashboard extends Component {
             })
         });
     }
+    handleGoalsDelete(goal) {
+        axios.delete(`${process.env.REACT_APP_HOST}/api/goals/${goal}`).then(res => {
+            this.setState({
+                goalEntries: res.data
+            })
+        });
+    }
 
     render() {
 
@@ -77,7 +84,7 @@ class Dashboard extends Component {
             <div>
                 <div className="gtitleParent">
                     <div className="goalsDay">Day 1 Goal:&emsp;</div>
-                    <div className="deleteGoals">Clear Goals</div><div className="deleteBtn2"> X </div>
+                    <div className="deleteGoals">Clear Goals</div><div className="deleteBtn2" onClick={(e) => this.handleGoalsDelete(goalEntries.id)}> X </div>
                 </div>
                     <div className="gday">{goalEntries.oneday}</div>
 
