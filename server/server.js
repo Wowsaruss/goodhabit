@@ -44,6 +44,8 @@ massive(process.env.CONNECTION_STRING)
     app.post('/api/goals', controller.submitGoalData);
 // PUT
 // DELETE
+    app.delete('/api/journal', controller.deleteJournalData);
+    app.delete('/api/goals', controller.deleteGoalsData);
 //////////////////////////////////////////////////////////////////////////////////////////
 
 // AUTH0
