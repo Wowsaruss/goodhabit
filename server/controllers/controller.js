@@ -1,9 +1,9 @@
 module.exports = {
 
     submitProfileData: (req, res) => {
-        const profileData = req.app.get('db')
-        req.app.get('db').create_profile([req.auth_id, req.body.username, req.body.addiction_type, req.body.addiction_date, req.body.first_name, req.body.last_name, req.body.sex, req.body.birthday, req.body.phone_number, req.body.profile_pic, req.body.about_me]).then(profile => {
-            res.send()
+        req.app.get('db').create_profile([req.user.id, req.body.username, req.body.addiction_type, req.body.addiction_date, req.body.first_name, req.body.last_name, req.body.sex, req.body.birthday, req.body.phone_number, req.body.profile_pic, req.body.about_me])
+        .then(response => {
+            res.status(200).end()
         })
         .catch( function(err){
             console.log(err)
@@ -63,9 +63,15 @@ module.exports = {
     },
 
     updateGoalsData: (req, res) => {
-        req.app.get('db').update_goals(req.body.id, 1).then(goals => {
+        req.app.get('db').update_goals(req.params.id, req.body.oneday,
+            req.body.threeday,req.body.oneweek,
+            req.body.twoweek,req.body.threeweek,
+            req.body.onemonth,req.body.twomonth,
+            req.body.threemonth,req.body.fourmonth,
+            req.body.fivemonth,req.body.sixmonth,
+            req.body.oneyear).then(goals => {
             res.status(200).send(goals)
-        })
+        }).catch((err)=> {console.log((err))})
     }
 };
 

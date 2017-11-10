@@ -29,7 +29,7 @@ class Dashboard extends Component {
         
 
     componentDidMount(){
-        axios.get(`${process.env.REACT_APP_HOST}/api/profiles`).then(response => {
+        axios.get(`/api/profiles`).then(response => {
             this.setState({
                 profile: response.data
             })
@@ -39,26 +39,26 @@ class Dashboard extends Component {
                 quote: res.data.contents.quotes[0].quote
             })
         });
-        axios.get(`${process.env.REACT_APP_HOST}/api/journal`).then(response => {
+        axios.get(`/api/journal`).then(response => {
             this.setState({
                 journalEntries: response.data
             })
         });
-        axios.get(`${process.env.REACT_APP_HOST}/api/goals`).then(response => {
+        axios.get(`/api/goals`).then(response => {
             this.setState({
                 goalEntries: response.data
             })
         });
     }
     handleJournalDelete(journal) {
-        axios.delete(`${process.env.REACT_APP_HOST}/api/journal/${journal}`).then(res => {
+        axios.delete(`/api/journal/${journal}`).then(res => {
             this.setState({
                 journalEntries: res.data
             })
         });
     }
     handleGoalsDelete(goal) {
-        axios.delete(`${process.env.REACT_APP_HOST}/api/goals/${goal}`).then(res => {
+        axios.delete(`/api/goals/${goal}`).then(res => {
             this.setState({
                 goalEntries: res.data
             })
@@ -66,6 +66,7 @@ class Dashboard extends Component {
     }
 
     render() {
+
         let journalEntries = this.state.journalEntries.map((journalEntries) => {
             return (
                 <div>
@@ -175,37 +176,37 @@ class Dashboard extends Component {
                 <hr/>
                 <div className="bg1Dash">
                     <div className="badgeParent1">
-                        <div className="badgeName"><div className="badge"><img src={day3} alt=""/></div>3 Days Finished</div>
-                        <div className="badgeName"><div className="badge"><img src={week2} alt=""/></div>2 Weeks Finished</div>
-                        <div className="badgeName"><div className="badge"><img src={month1} alt=""/></div>1 Month Finished</div>
-                        <div className="badgeName"><div className="badge"><img src={month3} alt=""/></div>3 Months Finished</div>
-                        <div className="badgeName"><div className="badge"><img src={month5} alt=""/></div>5 Months Finished</div>
-                        <div className="badgeName"><div className="badge"><img src={year1} alt=""/></div>1 Year Finished</div>
+                        <div className="badgeName"><div className="badge"><img src={day3}/></div>3 Days Finished</div>
+                        <div className="badgeName"><div className="badge"><img src={week2}/></div>2 Weeks Finished</div>
+                        <div className="badgeName"><div className="badge"><img src={month1}/></div>1 Month Finished</div>
+                        <div className="badgeName"><div className="badge"><img src={month3}/></div>3 Months Finished</div>
+                        <div className="badgeName"><div className="badge"><img src={month5}/></div>5 Months Finished</div>
+                        <div className="badgeName"><div className="badge"><img src={year1}/></div>1 Year Finished</div>
                     </div>
 
                     <div className="badgeParent2"> 
                         <div className="badgeName"><div className="arrow1">&ensp;&ensp;&ensp;&ensp; &#8599;</div><div className="badge">
-                        <img src={day1} alt=""/></div>1 Day Finished</div>
+                        <img src={day1}/></div>1 Day Finished</div>
 
                         <div className="badgeName"><div className="arrow2">&#8600; &ensp;&ensp;&ensp;&ensp;&ensp;</div>
                         <div className="arrow1">&ensp;&ensp;&ensp;&ensp;&ensp; &#8599;</div><div className="badge">
-                        <img src={week1} alt=""/></div>1 Week Finished</div>
+                        <img src={week1}/></div>1 Week Finished</div>
 
                         <div className="badgeName"><div className="arrow2">&#8600; &ensp;&ensp;&ensp;&ensp;&ensp;</div>
                         <div className="arrow1">&ensp;&ensp;&ensp;&ensp;&ensp; &#8599;</div><div className="badge">
-                        <img src={week3} alt=""/></div>3 Weeks Finished</div>
+                        <img src={week3}/></div>3 Weeks Finished</div>
 
                         <div className="badgeName"><div className="arrow2">&#8600; &ensp;&ensp;&ensp;&ensp;&ensp;</div>
                         <div className="arrow1">&ensp;&ensp;&ensp;&ensp;&ensp; &#8599;</div><div className="badge">
-                        <img src={month2} alt=""/></div>2 Months Finished</div>
+                        <img src={month2}/></div>2 Months Finished</div>
 
                         <div className="badgeName"><div className="arrow2">&#8600; &ensp;&ensp;&ensp;&ensp;&ensp;</div>
                         <div className="arrow1">&ensp;&ensp;&ensp;&ensp;&ensp; &#8599;</div><div className="badge">
-                        <img src={month4} alt=""/></div>4 Months Finished</div>
+                        <img src={month4}/></div>4 Months Finished</div>
 
                         <div className="badgeName"><div className="arrow2">&#8600; &ensp;&ensp;&ensp;&ensp;&ensp;</div>
                         <div className="arrow1">&ensp;&ensp;&ensp;&ensp;&ensp; &#8599;</div><div className="badge">
-                        <img src={month6} alt=""/></div>6 Months Finished</div>  
+                        <img src={month6}/></div>6 Months Finished</div>  
                     </div>
                 </div>
 
