@@ -2,10 +2,10 @@ module.exports = {
 
     checkPhoneNumber(num) {
         let arr = num.split("")
-        console.log(arr)
-          console.log(arr.length)
           if (arr.length > 10 || arr.length < 10) {
-            return 'Incorrect phone number';
+            return false;
+          } else{
+            return true;
           }
       },
       phoneNumberFormat(num) {
@@ -14,6 +14,13 @@ module.exports = {
         arr.splice(7, 0, '-');
         let correctNumber = arr.join('');
         return correctNumber;
+      },
+      checkFirstName(input) {
+        if (input !== "") {
+          return true;
+        } else {
+          return false;
+        }
       }
 
 }

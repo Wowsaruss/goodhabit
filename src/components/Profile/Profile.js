@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import units from '../../utilities/units';
 
 class Profile extends Component {
     constructor() {
@@ -20,19 +21,20 @@ class Profile extends Component {
         }
 
         postProfile(profile){
-          axios.post(`${process.env.REACT_APP_HOST}/api/profiles`, {
-            first_name: this.state.first_name,
-            last_name: this.state.last_name,
-            sex: this.state.sex,
-            birthday: this.state.birthday,
-            username: this.state.username,
-            addiction_date: this.state.time_input,
-            addiction_type: this.state.type_input,
-            phone_number: this.state.phone,
-            about_me: this.state.about_me,
-            profile_pic: this.state.profile_picture
+                units.checkPhoneNumber(this.state.phone)
+                    axios.post(`${process.env.REACT_APP_HOST}/api/profiles`, {
+                      first_name: this.state.first_name,
+                      last_name: this.state.last_name,
+                      sex: this.state.sex,
+                      birthday: this.state.birthday,
+                      username: this.state.username,
+                      addiction_date: this.state.time_input,
+                      addiction_type: this.state.type_input,
+                      phone_number: this.state.phone,
+                      about_me: this.state.about_me,
+                      profile_pic: this.state.profile_picture
+                    })
 
-          })
           alert("Profile Saved")
           this.setState({
               first_name: "",
@@ -76,7 +78,7 @@ class Profile extends Component {
         }
         updatePhone(input){
             this.setState({
-                phone: input
+                phone: units.phoneNumberFormat(input)
             })
         }
         updateFirstName(input){
