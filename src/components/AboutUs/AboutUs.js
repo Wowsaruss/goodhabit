@@ -3,15 +3,6 @@ import {Link} from 'react-router-dom';
 
 class AboutUs extends Component {
     render() {
-        const stopStyle = {
-            containerOutter: {
-              width: '250px',
-              height: '250px'
-            },
-            containerInner: {
-              lineHeight: '10'
-            }
-          }
         return(
            <div> 
             <div className="aboutbg">

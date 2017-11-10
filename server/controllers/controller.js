@@ -21,7 +21,7 @@ module.exports = {
 
     submitGoalData: (req,res) => {
         const db = req.app.get('db')
-        req.app.get('db').goals_input([req.user.id, req.body.oneday, req.body.threeday, req.body.oneweek, req.body.twoweek, 
+        req.app.get('db').goals_input([req.body.oneday, req.body.threeday, req.body.oneweek, req.body.twoweek, 
             req.body.threeweek, req.body.onemonth, req.body.twomonth, req.body.threemonth, req.body.fourmonth, 
             req.body.fivemonth, req.body.sixmonth, req.body.oneyear]).then(profile => {
                 res.send("hi")
@@ -29,7 +29,7 @@ module.exports = {
     },
 
     getProfileData: (req, res) => {
-        req.app.get('db').get_profile([req.user.id, req.body.username, req.body.addiction_type, req.body.addiction_time]).then(profile =>{
+        req.app.get('db').get_profile([1, req.body.username, req.body.addiction_type, req.body.addiction_time]).then(profile =>{
             res.status(200).send(profile);
         }).catch((err) => {console.log(err)})
     },
