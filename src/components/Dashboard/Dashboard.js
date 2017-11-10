@@ -14,6 +14,7 @@ import month4 from "../../Badges/4monthcoin.png";
 import month5 from "../../Badges/5monthscoins.png";
 import month6 from "../../Badges/6monthcoin.png";
 import year1 from "../../Badges/1yearcoin.png";
+import units from "../../../server/controllers/units";
 
 
 class Dashboard extends Component {
