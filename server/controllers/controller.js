@@ -10,21 +10,21 @@ module.exports = {
         })
     },
 
-    
-
     submitJournalData: (req, res) => {
+        let {journal_entry, journal_date, journal_time, journal_title} = req.body
         const db = req.app.get('db')
-        req.app.get('db').journal_entry([req.body.journal_entry, req.body.journal_date, req.body.journal_time, req.body.journal_title]).then(profile => {
-            res.send("Hi")
+        req.app.get('db').journal_entry([journal_entry, journal_date, journal_time, journal_title]).then(profile => {
+            res.status(200).send(profile)
         }).catch((err) => {console.log(err)})
     },
 
     submitGoalData: (req,res) => {
+        let{oneday, threeday, oneweek, twoweek, threeweek, onemonth, twomonth, threemonth, fourmonth, 
+            fivemonth, sixmonth, oneyear} = req.body
         const db = req.app.get('db')
-        req.app.get('db').goals_input([req.body.oneday, req.body.threeday, req.body.oneweek, req.body.twoweek, 
-            req.body.threeweek, req.body.onemonth, req.body.twomonth, req.body.threemonth, req.body.fourmonth, 
-            req.body.fivemonth, req.body.sixmonth, req.body.oneyear]).then(profile => {
-                res.send("hi")
+        req.app.get('db').goals_input([oneday, threeday, oneweek, twoweek, threeweek, onemonth, twomonth, threemonth, 
+            fourmonth, fivemonth, sixmonth, oneyear]).then(profile => {
+                res.status(200).send(profile)
             }).catch((err) => {console.log(err)})
     },
 
