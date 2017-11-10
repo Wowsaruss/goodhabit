@@ -1,9 +1,9 @@
 module.exports = {
 
     submitProfileData: (req, res) => {
-        const profileData = req.app.get('db')
-        req.app.get('db').create_profile([req.auth_id, req.body.username, req.body.addiction_type, req.body.addiction_date, req.body.first_name, req.body.last_name, req.body.sex, req.body.birthday, req.body.phone_number, req.body.profile_pic, req.body.about_me]).then(profile => {
-            res.send()
+        req.app.get('db').create_profile([req.user.id, req.body.username, req.body.addiction_type, req.body.addiction_date, req.body.first_name, req.body.last_name, req.body.sex, req.body.birthday, req.body.phone_number, req.body.profile_pic, req.body.about_me])
+        .then(response => {
+            res.status(200).end()
         })
         .catch( function(err){
             console.log(err)

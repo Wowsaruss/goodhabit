@@ -20,7 +20,7 @@ class Profile extends Component {
         }
 
         postProfile(profile){
-          axios.post(`${process.env.REACT_APP_HOST}/api/profiles`, {
+          axios.post('/api/profiles', {
             first_name: this.state.first_name,
             last_name: this.state.last_name,
             sex: this.state.sex,
@@ -33,6 +33,7 @@ class Profile extends Component {
             profile_pic: this.state.profile_picture
 
           })
+        // axios.get('/api/test')
           alert("Profile Saved")
           this.setState({
               first_name: "",

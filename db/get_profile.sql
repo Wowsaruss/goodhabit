@@ -1,3 +1,3 @@
 SELECT *
-FROM profiles 
-where userId = $1
+FROM users 
+where id = $1

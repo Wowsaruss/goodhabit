@@ -1,5 +1,13 @@
-INSERT INTO users
-(auth_id, username, addiction_type, addiction_date, first_name, last_name, sex, birthday, phone_number, profile_pic, about_me)
-VALUES
-($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+update users
+set username = $2
+, addiction_type=$3
+, addiction_date = $4
+, first_name = $5
+, last_name = $6
+, sex = $7
+, birthday = $8
+, phone_number = $9
+, profile_pic = $10
+, about_me = $11
+where id = $1
 RETURNING *;
