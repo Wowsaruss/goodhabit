@@ -29,7 +29,7 @@ module.exports = {
     },
 
     getProfileData: (req, res) => {
-        req.app.get('db').get_profile([req.user.id, req.body.username, req.body.addiction_type, req.body.addiction_time]).then(profile =>{
+        req.app.get('db').get_profile([1, req.body.username, req.body.addiction_type, req.body.addiction_time]).then(profile =>{
             res.status(200).send(profile);
         }).catch((err) => {console.log(err)})
     },
