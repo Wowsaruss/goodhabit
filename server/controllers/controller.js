@@ -40,8 +40,13 @@ module.exports = {
         }).catch((err) => {console.log(err)})
     },
 
+    // getGoalsData: (req, res) => {
+    //     req.app.get('db').get_goals(1).then(goals => {
+    //         res.status(200).send(goals);
+    //     }).catch((err) => {console.log(err)})
+    // },
     getGoalsData: (req, res) => {
-        req.app.get('db').get_goals(1).then(goals => {
+        req.app.get('db').get_goals([req.user.id]).then(goals => {
             res.status(200).send(goals);
         }).catch((err) => {console.log(err)})
     },

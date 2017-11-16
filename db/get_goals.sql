@@ -1,2 +1,2 @@
-SELECT * FROM goals;
-where user_id = $1
+SELECT * FROM goals
+where userid = $1
