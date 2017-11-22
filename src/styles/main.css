@@ -72,23 +72,6 @@ body {
   flex-direction: row;
   cursor: pointer; }
 
-.dashBG {
-  background-color: #d1d1d1;
-  background: -webkit-linear-gradient(#b6c3ce, #013a4d);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#b6c3ce, #013a4d);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#b6c3ce, #013a4d);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#b6c3ce, #013a4d);
-  /* Standard syntax */
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3500px; }
-
 .quotesParent {
   display: flex;
   justify-content: center;
