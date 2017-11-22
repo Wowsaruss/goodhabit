@@ -1,21 +1,10 @@
-.Landingbg {
+body {
   padding: 0px;
   margin: 0px;
-  height: 800px;
-  background-color: #585858;
-  background: -webkit-linear-gradient(#585858, black);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#585858, black);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#585858, black);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#585858, black);
-  /* Standard syntax */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; }
+  background-color: #262626; }
+
+.Landingbg {
+  background-color: #262626; }
 
 .landing-title {
   text-align: center;
@@ -24,212 +13,64 @@
   width: 100%;
   margin-top: 120px; }
   .landing-title h1 {
-    font-size: 100px;
-    color: #17e4e4;
-    font-family: 'Pavanam', sans-serif;
+    padding: 0px;
+    margin: 30px;
+    font-size: 180px;
+    color: #4bffff;
+    font-family: "Pavanam", sans-serif;
     letter-spacing: 8px;
-    font-weight: 600;
-    text-shadow: 2px 8px #242424; }
+    text-shadow: 8px 8px #ff3232; }
   .landing-title .subtitle {
     margin-top: -80px;
-    color: rgba(248, 171, 103, 0.979);
-    font-family: 'Pavanam', sans-serif;
-    text-shadow: 2px 2px #141414;
+    font-family: "Pavanam", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; }
-  .landing-title .loginBtn {
-    margin-top: 25px;
-    height: 50px;
-    width: 180px;
-    background-color: #1e7ba3;
-    background: -webkit-linear-gradient(#1e7ba3, #0b3141);
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#1e7ba3, #0b3141);
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#1e7ba3, #0b3141);
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#1e7ba3, #0b3141);
-    /* Standard syntax */
-    box-shadow: 2px 2px 2px #242424;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    font-size: 20px;
-    color: #d4d4d4;
-    text-shadow: 1.5px 1.5px #141414;
-    cursor: pointer;
-    font-weight: bold; }
 
-.landingFParent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row; }
-
-.landingFoot {
-  margin-top: -170px;
-  height: 170px;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0);
-  display: flex;
-  justify-content: flex-start;
-  align-items: center; }
-
-.AU {
-  margin-left: 100px;
+.login-btn {
+  margin-top: 20px;
   height: 50px;
-  width: 180px;
-  font-size: 25px;
-  background-color: #585858;
-  background: -webkit-linear-gradient(rgba(88, 88, 88, 0.431), rgba(0, 0, 0, 0.267));
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(88, 88, 88, 0.431), rgba(0, 0, 0, 0.267));
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(88, 88, 88, 0.431), rgba(0, 0, 0, 0.267));
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(88, 88, 88, 0.431), rgba(0, 0, 0, 0.267));
-  /* Standard syntax */
-  border-radius: 5px;
-  color: #e2e1e1;
-  text-shadow: 1.5px 1.5px #141414;
-  box-shadow: 2px 2px 2px #242424;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  cursor: pointer;
-  position: absolute; }
+  width: 300px;
+  font-size: 30px;
+  background-color: white;
+  cursor: pointer; }
 
-.Link {
+.about-us {
+  height: 50px;
+  width: 300px;
+  font-size: 30px;
+  background-color: white;
+  cursor: pointer; }
+
+.link {
   text-decoration: none;
   color: #0daceb; }
-  .Link:hover {
+  .link:hover {
     color: rgba(248, 171, 103, 0.979); }
 
-.auth1 {
-  text-decoration: none;
-  color: #d4d4d4; }
-  .auth1:hover {
-    color: #17e4e4; }
-
-.aboutbg {
-  background-color: #585858;
-  background: -webkit-linear-gradient(#585858, black);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#585858, black);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#585858, black);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#585858, black);
-  /* Standard syntax */
-  height: 1000px;
-  margin: 0 auto;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; }
-
-.bgAbout {
-  height: 400px; }
-
-.aboutParent {
+.about-parent {
+  background-image: url("https://unsplash.com/photos/YkWz_coLm84") no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: baseline;
   align-items: flex-start;
   flex-direction: column;
   color: white;
-  text-shadow: 1.5px 1.5px black;
   margin-left: 70px;
   margin-top: 30px;
   font-size: 30px;
   height: 100vh; }
-  .aboutParent h1 {
-    margin-left: 60px; }
 
-.aboutBG {
-  width: 80%;
-  border-radius: 15px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row; }
-
-.stripeBG {
-  margin-left: 10px;
-  margin-right: 50px;
-  background-color: rgba(39, 197, 181, 0.246);
-  height: 1000px;
-  width: 30%;
-  box-shadow: 2px 10px 10px black; }
-
-.return {
+.back-to-start {
   height: 50px;
   width: 180px;
   font-size: 25px;
-  background-color: #585858;
-  background: -webkit-linear-gradient(rgba(88, 88, 88, 0.431), rgba(0, 0, 0, 0.267));
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(88, 88, 88, 0.431), rgba(0, 0, 0, 0.267));
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(88, 88, 88, 0.431), rgba(0, 0, 0, 0.267));
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(88, 88, 88, 0.431), rgba(0, 0, 0, 0.267));
-  /* Standard syntax */
-  border-radius: 5px;
-  color: #e2e1e1;
-  text-shadow: 1.5px 1.5px #141414;
-  box-shadow: 2px 2px 2px #242424;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  cursor: pointer;
-  position: absolute;
-  top: 850px;
-  left: 160px; }
-
-.aboutDes1 {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-direction: column;
-  margin-top: 50px; }
-
-.aboutDes2 {
-  height: 850px;
-  width: 700px;
-  background-color: rgba(255, 255, 255, 0.856);
-  margin-bottom: 60px;
-  padding: 8px;
-  border-radius: 5px;
-  box-shadow: 2px 10px 10px black; }
-  .aboutDes2 h3 {
-    margin-top: 50px;
-    color: black;
-    font-size: 20px;
-    text-shadow: 0.3px 0.3px black;
-    padding: 10px; }
-
-.paragraphs {
-  font-size: 18px;
-  color: #26b9a8;
-  text-shadow: 0.5px 0.5px #252525;
-  margin-top: -35px;
-  padding: 30px; }
-
-.paragraphs2 {
-  font-size: 18px;
-  color: #26b9a8;
-  text-shadow: 0.5px 0.5px #252525;
-  margin-top: -30px;
-  padding: 30px;
-  margin-bottom: 30px; }
+  cursor: pointer; }
 
 .dashBG {
   background-color: #d1d1d1;

@@ -17,17 +17,41 @@ class Landing extends Component {
         return(
             <div className="Landingbg">
                 <div className='landing-title' >
-                    <div><h1>RESTORE</h1></div>
-                    <div className='subtitle'><h4>RECOVER.&ensp;&ensp; SURPRESS.&ensp;&ensp; TRANSFORM.&ensp;&ensp; OVERCOME.&ensp;&ensp; RENEW.&ensp;&ensp; ELEVATE.</h4>
-                    <div className="loginBtn"><a className="auth1" href={`${process.env.REACT_APP_HOST}/auth`}><div>Start Now</div></a></div></div>
-                </div>
-                <Particles params={{particles: {line_linked: { shadow: { enable: true, color: "#3CA9D1", blur: 5}}}}} style={{width: '100%'}} />
-
-                <div className="landingFParent">
-                    <div className="landingFoot">
-                        <div className="AU"><Link className="Link" to="aboutus"><div>About Us</div></Link></div>
+                    <div>
+                        <h1>RESTORE</h1>
+                    </div>
+                    <div className='subtitle'>
+                        <h4>RECOVER.&ensp;&ensp; SURPRESS.&ensp;&ensp; TRANSFORM.&ensp;&ensp; OVERCOME.&ensp;&ensp; RENEW.&ensp;&ensp; ELEVATE.</h4>
+                        <button className='login-btn'>
+                            <a className='link' href={`${process.env.REACT_APP_HOST}/auth`}>
+                                Start Now
+                            </a>
+                        </button>
+                        <button className='about-us' >
+                            <Link className="link" to="aboutus">
+                                About Us
+                            </Link>
+                        </button>
                     </div>
                 </div>
+                <Particles 
+                    params={{
+                        particles: {
+                            line_linked: {
+                                enable: true,
+                                shadow: {
+                                    enable: true,
+                                    color: "rgb(255, 255, 75)",
+                                    blur: 1
+                                    }
+                                }
+                            }
+                        }}
+                    style={{
+                        width: '100%',
+                        height: '100vh'
+                        }}
+                />
             </div>
         );
     };
