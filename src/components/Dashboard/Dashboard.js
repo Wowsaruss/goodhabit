@@ -171,11 +171,17 @@ class Dashboard extends Component {
                 <div className="bg0Dash">
                     <div className="dashboard">DASHBOARD</div>
                 </div>
-                <div className="Welcome">
-                    {/* <h2>Welcome {profile},</h2> */}
-                    Don't have a profile yet?<br/>Click the link to get started.&ensp;&ensp;&ensp;&ensp<br/><br/>
-                    <span><Link className="profileLink" to="/profile">Create Profile&ensp;&ensp;</Link></span>
-                    <span><a className="profileLink" href={`${process.env.REACT_APP_HOST}/auth/logout`}>&ensp; / &ensp;Logout</a></span>
+                <div>
+                    <button className="profile-button">
+                        <Link to="/profile">
+                            Create Profile
+                        </Link>
+                    </button>
+                    <button className="profile-button">
+                        <a href={`${process.env.REACT_APP_HOST}/auth/logout`}>
+                            Logout
+                        </a>
+                    </button>
                 </div>
                 <div className="quotesParent">
                     <div className="quotes">

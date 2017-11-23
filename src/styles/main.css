@@ -1,7 +1,7 @@
 body {
   padding: 0px;
   margin: 0px;
-  background-color: #262626; }
+  background-color: white; }
 
 .Landingbg {
   background-color: #262626; }
@@ -72,6 +72,30 @@ body {
   flex-direction: row;
   cursor: pointer; }
 
+.bg0Dash {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; }
+
+.dashboard {
+  margin-top: 80px;
+  width: 500px;
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; }
+
+.profile-button {
+  height: 30px;
+  width: 100px; }
+
 .quotesParent {
   display: flex;
   justify-content: center;
@@ -82,63 +106,12 @@ body {
   text-align: center;
   height: 200px;
   width: 50%;
-  margin-right: 50px;
-  margin-top: 0px;
-  margin-left: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   font-size: 25px;
-  font-style: italic;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #ee9755;
-  text-shadow: 2px 1px #01456d; }
-
-.bg0Dash {
-  margin-top: 0px;
-  height: 80px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row; }
-
-.Welcome {
-  position: absolute;
-  top: 150px;
-  left: 1150px;
-  margin-top: -60px;
-  margin-left: 100px;
-  height: 120px;
-  width: 500px;
-  border-radius: 8px; }
-  .Welcome h2 {
-    margin-left: -40px; }
-  .Welcome span {
-    margin-left: -20px;
-    color: #fa0404;
-    font-size: 20px;
-    text-shadow: 0.5px 0.5px #252525; }
-  .Welcome .profileLink {
-    text-decoration: none;
-    color: red; }
-    .Welcome .profileLink:hover {
-      color: #247fa7; }
-
-.dashboard {
-  margin-top: 80px;
-  width: 500px;
-  font-size: 60px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  color: white;
-  text-shadow: 2px 2px #242424;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row; }
+  color: black; }
 
 .bg1Dash {
   margin-top: 50px;
@@ -176,7 +149,6 @@ body {
   width: 100px;
   border-radius: 50px;
   margin-bottom: 15px;
-  box-shadow: 5px 5px 5px #2c2c2c;
   margin-left: 70px;
   margin-right: 70px; }
   .badge img {

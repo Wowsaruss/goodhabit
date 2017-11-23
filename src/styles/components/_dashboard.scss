@@ -1,71 +1,7 @@
-// .dashBG {
-//     background-color: rgb(209, 209, 209);
-//     background: -webkit-linear-gradient(rgb(182, 195, 206), rgb(1, 58, 77)); /* For Safari 5.1 to 6.0 */
-//     background: -o-linear-gradient(rgb(182, 195, 206), rgb(1, 58, 77)); /* For Opera 11.1 to 12.0 */
-//     background: -moz-linear-gradient(rgb(182, 195, 206), rgb(1, 58, 77)); /* For Firefox 3.6 to 15 */
-//     background: linear-gradient(rgb(182, 195, 206), rgb(1, 58, 77)); /* Standard syntax */
-//     position: absolute;
-//     top:0;
-//     bottom:0;
-//     left:0;
-//     right: 0;
-//     height: 3500px;
-// }
-.quotesParent {
-    @include flexSetUp (center, center, row);
-}
-
-.quotes {
-    text-align: center;
-    height: 200px;
-    width: 50%;
-    margin-right: 50px;
-    margin-top: 0px;
-    margin-left: 50px;
-    @include flexSetUp (center, center, row);
-    font-size: 25px;
-    font-style: italic;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: rgb(238, 151, 85);
-    text-shadow: 2px 1px rgb(1, 69, 109);
-}
-
 .bg0Dash {
-    margin-top: 0px;
     height: 80px;
     width: 100%;
     @include flexSetUp (center, center, row);  
-}
-
-.Welcome {
-    position: absolute;
-    top: 150px;
-    left: 1150px;
-    margin-top: -60px;
-    margin-left: 100px;
-    height: 120px;
-    width: 500px;
-    border-radius: 8px;
-
-        h2 {
-            margin-left: -40px;
-        }
-
-        span {
-            margin-left: -20px;
-            color: rgb(250, 4, 4);
-            font-size: 20px;
-            text-shadow: 0.5px 0.5px rgb(37, 37, 37);
-        }
-
-        .profileLink {
-            text-decoration: none;
-            color: red;
-                &:hover {
-                    color:rgb(36, 127, 167);
-                }
-        }
 }
 
 .dashboard {
@@ -74,9 +10,26 @@
     font-size: 60px;
     font-weight: bold;
     letter-spacing: 3px;
-    color: white;
-    text-shadow: 2px 2px rgb(36, 36, 36);
+    color: rgb(0, 0, 0);
     @include flexSetUp (center, center, row);
+}
+
+.profile-button {
+    height: 30px;
+    width: 100px;
+}
+
+.quotesParent {
+    @include flexSetUp (center, center, row);
+}
+
+.quotes {
+    text-align: center;
+    height: 200px;
+    width: 50%;
+    @include flexSetUp (center, center, row);
+    font-size: 25px;
+    color: rgb(0, 0, 0);
 }
 
 .bg1Dash {
@@ -113,7 +66,6 @@
     width: 100px;
     border-radius: 50px;
     margin-bottom: 15px;
-    box-shadow: 5px 5px 5px rgb(44, 44, 44);
     margin-left: 70px;
     margin-right: 70px;
         img {
@@ -121,7 +73,6 @@
             width: 100px;
         }
 }
-
 
 .badgeName {
     text-align: center;
@@ -198,13 +149,11 @@
          color: white;
          letter-spacing: 1.5px;
      }
-
      span {
          color: green;
          font-weight: bold;
          font-size: 25px;
      }
-
      .su {
          color: rgb(27, 112, 151);
          font-weight: bold;
@@ -232,7 +181,6 @@
     height: 200px;
     margin-top: 10px;
     @include flexSetUp (center, center, row);
-
     h3 {
         margin-top: -10px;
         border: 1.5px solid rgb(211, 211, 211);
@@ -244,7 +192,6 @@
         font-size: 20px;
         font-weight: 400;
     }
-
     span {
         font-size: 25px;
         font-weight: 200;
@@ -331,7 +278,6 @@
     width: 600px;
     font-size: 20px;
     font-style: italic;
-
         span {
             width: 300px;
             font-size: 22px;
