@@ -2,7 +2,7 @@
   "name": "goodhabitproject",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3300",
+  "proxy": "http://localhost:3800",
   "main": "./server/server.js",
   "dependencies": {
     "axios": "^0.17.0",

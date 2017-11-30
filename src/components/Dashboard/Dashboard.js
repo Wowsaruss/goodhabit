@@ -93,66 +93,77 @@ class Dashboard extends Component {
             <div>
                 <div className="gtitleParent">
                     <div className="goalsDay">Day 1 Goal:&emsp;</div>
-                    <div className="deleteGoals">Clear Goals</div><div className="deleteBtn2" onClick={(e) => this.handleGoalsDelete(goalEntries.id)}> X </div>
+                    <div className="deleteGoals">Clear Goals</div>
+                    <div className="deleteBtn2" onClick={(e) => this.handleGoalsDelete(goalEntries.id)}>X</div>
                 </div>
-                    <div className="gday">{goalEntries.oneday}</div>
-
+                <div className="gday">
+                    {goalEntries.oneday}
+                </div>
                 <div className="gtitleParent">
                     <div className="goalsDay">Day 3 Goal:&emsp;</div>
                 </div>
-                    <div className="gday">{goalEntries.threeday}</div>
-            
+                <div className="gday">
+                    {goalEntries.threeday}
+                </div>
                 <div className="gtitleParent">
                     <div className="goalsDay">Week 1 Goal:&emsp;</div>
                 </div>
-                    <div className="gday">{goalEntries.oneweek}</div>
-
-                    <div className="gtitleParent">
+                <div className="gday">
+                    {goalEntries.oneweek}
+                </div>
+                <div className="gtitleParent">
                     <div className="goalsDay">Week 2 Goal:&emsp;</div>
                 </div>
-                    <div className="gday">{goalEntries.twoweek}</div>
-
-                    <div className="gtitleParent">
+                <div className="gday">
+                    {goalEntries.twoweek}
+                </div>
+                <div className="gtitleParent">
                     <div className="goalsDay">Week 3 Goal:&emsp;</div>
                 </div>
-                    <div className="gday">{goalEntries.threeweek}</div>
-
-                    <div className="gtitleParent">
+                <div className="gday">
+                    {goalEntries.threeweek}
+                </div>
+                <div className="gtitleParent">
                     <div className="goalsDay">Month 1 Goal:&emsp;</div>
                 </div>
-                    <div className="gday">{goalEntries.onemonth}</div>
-
-                    <div className="gtitleParent">
+                <div className="gday">
+                    {goalEntries.onemonth}
+                </div>
+                <div className="gtitleParent">
                     <div className="goalsDay">Month 2 Goal:&emsp;</div>
                 </div>
-                    <div className="gday">{goalEntries.twomonth}</div>
-
-                    <div className="gtitleParent">
+                <div className="gday">
+                    {goalEntries.twomonth}
+                </div>
+                <div className="gtitleParent">
                     <div className="goalsDay">Month 3 Goal:&emsp;</div>
                 </div>
-                    <div className="gday">{goalEntries.threemonth}</div>
-
-                    <div className="gtitleParent">
+                <div className="gday">
+                    {goalEntries.threemonth}
+                </div>
+                <div className="gtitleParent">
                     <div className="goalsDay">Month 4 Goal:&emsp;</div>
                 </div>
-                    <div className="gday">{goalEntries.fourmonth}</div>
-
-                    <div className="gtitleParent">
+                <div className="gday">
+                    {goalEntries.fourmonth}
+                </div>
+                <div className="gtitleParent">
                     <div className="goalsDay">Month 5 Goal:&emsp;</div>
                 </div>
-                    <div className="gday">{goalEntries.fivemonth}</div>
-
-                    <div className="gtitleParent">
+                <div className="gday">
+                    {goalEntries.fivemonth}
+                </div>
+                <div className="gtitleParent">
                     <div className="goalsDay">Month 6 Goal:&emsp;</div>
                 </div>
-                    <div className="gday">{goalEntries.sixmonth}</div>
-
-                    <div className="gtitleParent">
+                <div className="gday">
+                    {goalEntries.sixmonth}
+                </div>
+                <div className="gtitleParent">
                     <div className="goalsDay">1 year Goal:&emsp;</div>
                 </div>
-                    <div className="gday">{goalEntries.oneyear}</div>
-                    
-                <div>
+                <div className="gday">
+                    {goalEntries.oneyear}
                 </div>
             </div>
             )
@@ -161,7 +172,7 @@ class Dashboard extends Component {
         let profile = this.state.profile.map(() => {
             return (
                 <div className='user-box/'>
-                    <h3>{profile.username}</h3>
+                    {/* <h3>{profile.username}</h3> */}
                  </div>
             )
         })
