@@ -35,7 +35,7 @@ module.exports = {
         },
     
        getJournalData: (req, res) => {
-            req.app.get('db').get_journal([]).then(journal => {
+            req.app.get('db').get_journal([req.user.id]).then(journal => {
                 res.status(200).send(journal);
             }).catch((err) => {console.log(err)})
         },
